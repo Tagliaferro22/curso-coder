@@ -1,0 +1,128 @@
+* {margin: 0;
+padding: 0;
+box-sizing: border-box;}
+
+/* Color de fondo */
+.cuerpoCompleto {background-color: #ffba08;}
+
+/* header */
+.cabecera {display: grid;
+grid-template-areas: "title";
+background-color: #faa307;
+width: auto;
+height: auto;
+padding: auto;
+margin: 18px;
+border: 3px solid black;}
+.title {grid-area: title;
+    width: 100%;
+    text-align: center;
+padding: 1%;
+margin: auto;}
+
+/* nav */
+.barraDeNavegacion {background-color: #f48c06;
+    border: 3px solid black;
+display: grid;
+grid-template-areas: "menu";
+text-align: center;
+margin: 18px;
+padding: 18px;
+width: auto;}
+.menu {grid-area: menu;
+    display: grid;
+    grid-template-areas: "blog portafolio contacto";
+list-style: none;}
+li.blog {grid-area: blog;}
+li.portafolio {grid-area: portafolio;}
+li.contacto {grid-area: contacto;}
+li a {color: #d00000;
+    font-size: 2.4rem;
+    text-decoration: none;
+margin: 1rem;}
+
+/* Main */
+.cuerpoVisible { display: grid;
+    grid-template-areas: "imagen padre padre-texto";
+    gap: 18px;
+    margin: 18px;
+ border: 3px solid black;
+ padding: 18px;
+ height: 100%;
+ width: auto;
+ background-color: #e85d04;
+}
+
+
+/* imagen */
+.imagenes {grid-area: imagen;
+    display: flex;
+    justify-content: center;
+    margin: 18px;
+    padding: 18px;
+    height: auto;
+    width: 100%;
+background-color: #dc2f02;}
+.img-index {width: 100%;}
+
+/* padre */
+.padre {grid-area: padre;
+    display: flex;
+flex-wrap: wrap;
+margin: 18px;
+padding: 18px;
+height: auto;
+width: auto;
+background-color: #d00000;}
+
+/* hijo */
+.hijo {background-color: aqua;
+width: 40px;
+height: 40px;
+margin: 4px;}
+
+/* Texto */
+.padre-texto {grid-area: padre-texto;
+margin: 18px;
+padding: 18px;
+background-color: #d00;
+height: auto;}
+.texto-hijo {height: auto;}
+
+/* pie de página */
+.pieDePagina {display: flex;
+    justify-content: center;
+align-content: flex-end;
+margin: 18px;
+border: 3px solid black;
+padding: 18px;
+height: auto;
+width: auto;
+background-color: #9d0208;}
+.texto {font-family: Verdana, Geneva, Tahoma, sans-serif;}
+
+/* Media Queries */
+@media screen and (max-width: 480px){
+
+           /* Nav */
+           .menu-list {
+            gap: 9px;}
+                li a {
+                    font-size:  1.4rem;
+                margin: 0.4rem;} 
+
+    /* Main */
+ .cuerpoVisible {display: grid;
+    grid-template-areas: "imagen"
+    "padre"
+    "padre-texto";
+    padding: 18px;
+}
+/* imagen */
+.imagenes { width: auto;}
+
+/* Padre */
+.padre {width: auto;}
+
+
+}

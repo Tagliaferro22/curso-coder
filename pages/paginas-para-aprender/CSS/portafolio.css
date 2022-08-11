@@ -1,0 +1,125 @@
+* {margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+    /* Color de fondo */
+    .cuerpoCompleto {background-color: #ffba08;}
+    
+    /* header */
+    .cabecera {display: flex;
+        justify-content: center;
+        width: auto;
+        height: auto;
+    padding: auto;
+    margin: 18px;
+    border: 3px solid black;}
+    .title { width: 100%;
+        background-color: #faa307;
+        text-align: center;
+    height: 80%;
+    padding: 1%;
+    margin: auto; }
+    
+    /* nav */
+    .barraDeNavegacion {background-color: #f48c06;
+        border: 3px solid black;
+    display: grid;
+    grid-template-areas: "menu";
+    text-align: center;
+    margin: 18px;
+    padding: 18px;
+    width: auto;}
+    .menu {grid-area: menu;
+        display: grid;
+        grid-template-areas: "contacto inicio";
+    list-style: none;}
+    li.contacto {grid-area: contacto;}
+    li.inicio {grid-area: inicio;}
+
+    li a {color: #d00000;
+        font-size: 2.4rem;
+        text-decoration: none;
+    margin: 1rem;}
+
+    
+    /* Main */
+    .cuerpoVisible {display: grid;
+    grid-template-areas: "imagen"
+    "padre";
+width: auto;
+background-color: #e85d04;
+margin: 18px;
+border: 3px solid black;
+padding: 18px;}
+    
+    /* imagen */
+    .imagenes {
+        grid-area: imagen;
+        margin: 18px;
+        border: 3px solid black;
+        padding: 18px;
+        height: auto;
+        width: auto;
+    background-color: #dc2f02;}
+    .img-index {width: 100%;
+    height: auto;}
+
+    /* Padre */
+    .padre {display: grid;
+    grid-area: padre;
+    margin: 18px;
+    border: 3px solid black;
+    padding: 18px;
+    height: auto;
+    width: auto;
+    background-color: #d00000;}
+    /* .padre {display: flex;
+        flex-wrap: wrap;
+        margin: 18px;
+        border: 3px solid black;
+        padding: 18px;
+        height: auto;
+        width: 40%;
+        background-color: #d00000;} */
+    
+    /* pie de página */
+    .pieDePagina {display: flex;
+        justify-content: center;
+    align-content: flex-end;
+    margin: 18px;
+    border: 3px solid black;
+    padding: 18px;
+    height: auto;
+    width: auto;
+    background-color: #9d0208;}
+    .textoPie {font-family: Verdana, Geneva, Tahoma, sans-serif;}
+    
+@media screen and (max-width: 480px){
+    li a {font-size: 1.4rem;}
+}
+
+
+
+
+/* *{margin: 0;
+padding: 0;
+box-sizing: border-box;}
+header {display: flex;
+justify-content: center;
+flex-direction: column;}
+ul.menu-navegation {display: flex;
+    justify-content: space-evenly ;}
+nav ul li{display: flex;}
+
+main {border: 3px solid black;
+    background-color: #e5e;
+margin: 18px;}
+nav, .title {margin: 18px;
+background-color: #e5e;
+border: 3px solid black;}
+body, img{background-color: red;}
+footer {display: flex;
+    justify-content: center;
+align-content: flex-end;}
+img {width: 200px;}
+.texto {font-family: Verdana, Geneva, Tahoma, sans-serif;} */

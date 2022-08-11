@@ -1,0 +1,131 @@
+    *{margin: 0;
+    padding: 0;
+box-sizing: border-box;}
+
+/* body */
+.cuerpoCompleto {background-color: #ffba08;}
+    
+    /* header */
+    .cabecera {display: flex;
+        justify-content: center;
+        width: auto;
+        height: auto;
+    padding: auto;
+    margin: 18px;
+    border: 3px solid black;
+border-radius: 10px;}
+    .title { font-size: 45px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: inherit;
+        width: 100%;
+        text-align: center;
+    height: 80%;
+    padding: 1%;
+    background-color: #FFAA00;
+    margin: auto; }
+
+/* imagen */
+.imagenes {
+    margin: 18px;
+    /* border: 3px solid black; */
+    padding: 18px;
+    height: 50%;
+    width: auto;
+    text-align: center;}
+/* background-color: #dc2f02;} */
+.img-index {width: 50%;
+
+height: auto;}
+
+/* Menu */
+.barraDeNavegacion {background-color: #FFAA00;
+    border: 3px solid blueviolet;
+    border-style: ridge;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    margin: 18px;
+    padding: 18px;
+    width: auto;}
+    .menu-list {display: grid;
+        list-style: none;
+        grid-template-areas: "experiencias notando podcast"
+        "rimando . inicio";
+        gap: 18px;
+    }
+    nav ul li {display:flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80%;
+ margin: 18px;}
+        li a {color: #d00000;
+            font-size: 1.8rem;
+            text-decoration: none;
+        margin: 1rem;} 
+    li.experiencias {grid-area: experiencias;}
+    li.notando {grid-area: notando;}
+    li.podcast {grid-area: podcast;}
+    li.rimando {grid-area: rimando;}
+    li.inicio {grid-area: inicio;} 
+
+ /* main */
+ .cuerpoVisible {
+    margin: 18px;
+ border: 3px solid blueviolet;
+ border-radius: 10px;
+ padding: 18px;
+ height: 100%;
+ width: auto;
+ background-color: #e85d04;}
+ .seccion {display: grid;
+    justify-content: center;
+    padding: 18px;
+gap: 18px;}
+
+
+ /* Entradas del blog */
+.sub-title {text-align: center;
+    font-size: 27px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: inherit;
+        background-color: #FFAA00;}
+        .texto, .sig {color: rgb(0, 45, 247);
+            font-size: 18px;
+           font-style: oblique;
+           border: 2px aqua;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+               background-color: #FFAA00;}
+       article.entrada-blog {color: rgb(32, 180, 57);
+            border-style: ridge;
+            border-color: blueviolet;
+            border-radius: 3px;
+            background: #FFAA00;
+            margin: 18px;
+            padding: 18px;
+            border-radius: 10px;}
+        .links, .citando {background-color: #FFAA00;
+        color: rgb(0, 45, 247);}
+        .totalidad {background-color: #FFEA00;}
+
+      /* pie de página */
+      .pieDePagina {display: flex;
+        justify-content: center;
+    align-content: flex-end;
+    margin: 18px;
+    border: 3px solid black;
+    padding: 18px;
+    height: auto;
+    width: auto;
+    background-color: #9d0208;}
+    .textoPie {font-family: Verdana, Geneva, Tahoma, sans-serif;}
+
+    /* Media Queries */
+    @media screen and (max-width: 480px){
+                              /* Nav */
+                              .menu-list {
+                                gap: 9px;}
+                                    li a {
+                                        font-size:  1rem;
+                                    margin: 0.4rem;} 
+            .seccion {padding: 18px;}
+    }

@@ -1,0 +1,140 @@
+* {margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+    /* Color de fondo */
+    .cuerpoCompleto {background-color: #ffba08;}
+    
+    /* header */
+    .cabecera {display: grid;
+        justify-content: center;
+        width: auto;
+        height: auto;
+    padding: auto;
+    margin: 18px;
+    background-color: #faa307;
+    border: 3px solid black;}
+    .title { width: 100%;
+        text-align: center;
+    height: 80%;
+    padding: 1%;
+    margin: auto; 
+font-size: 4rem;}
+    
+    /* nav */
+    .barraDeNavegacion {background-color: #f48c06;
+        border: 3px solid black;
+    display: grid;
+    margin: 18px;
+    padding: 18px;
+    width: auto;
+    justify-content: center;
+    }
+    .menu-list {display: grid;
+    list-style: none;
+    grid-template-areas: "experiencias aprendizajes podcast"
+    "rimando . inicio";
+    gap: 18px;}
+        li a {color: #d00000;
+            font-size: 1.8rem;
+            text-decoration: none;
+        margin: 1rem;} 
+    li.experiencias {grid-area: experiencias;}
+    li.aprendizajes {grid-area: aprendizajes;}
+    li.podcast {grid-area: podcast;}
+    li.rimando {grid-area: rimando;}
+    li.index-blog {grid-area: inicio;}
+    
+    
+    /* Main */
+    .cuerpoVisible {
+        margin: 18px;
+        border: 3px solid black;
+        padding: 18px;
+        height: 100%;
+        width: auto;
+        background-color: #e85d04;
+    }
+    .seccion {display: grid;
+        grid-template-areas: "notandoSeis notando-meaning"
+        "notandoCinco notandoCinco"
+        "notandoCuatro notandoCuatro"
+        "notandoTres notandoTres"
+        "notandoDos notandoDos"
+        "notandoUno notandoUno";
+        gap: 18px;}
+
+    /* Entradas del blog */
+    .entrada-blog {
+        display: grid;
+        margin: 18px;
+        border: 3px solid black;
+        padding: 18px;
+        height: auto;
+        width: auto;
+        background-color: #b1a7a6;}
+        .sub-title {font-size: 2.7rem;
+            display: flex;
+            justify-content: center;}
+            .texto {font-size: 1.8rem;}
+            .tiempo {font-size: 1.2rem;}
+    .notandoUno {grid-area: notandoUno;}
+    .notandoDos {grid-area: notandoDos;}
+    .notandoTres {grid-area: notandoTres;}
+    .notandoCuatro {grid-area: notandoCuatro;}
+    .notandoCinco {grid-area: notandoCinco;}
+    .notandoSeis {grid-area: notandoSeis;}
+
+
+     /* info lateral */
+     .notando-meaning {grid-area: notando-meaning;
+        margin: 18px;
+    border: 3px solid black;
+padding: 18px;
+background-color: #b1a7a6;
+width: auto;
+}
+    
+    /* imagen */
+    .imagenes {display: flex;
+        justify-content: center;
+        margin: 18px;
+        border: 3px solid black;
+        width: auto;
+    background-color: #dc2f02;}
+    .img-index {width: 70%;}
+    
+    /* pie de página */
+    .pieDePagina {display: grid;
+        justify-content: center;
+    margin: 18px;
+    border: 3px solid black;
+    padding: 18px;
+    height: auto;
+    width: auto;
+    background-color: #9d0208;}
+    .textoPie {font-family: Verdana, Geneva, Tahoma, sans-serif;}
+
+            /* Media queries */
+            @media screen and (max-width: 480px){
+                /* Nav */
+                .menu-list {
+                gap: 9px;}
+                    li a {
+                        font-size:  1rem;
+                    margin: 0.4rem;} 
+            /* Main */
+            .seccion {display: grid;
+                grid-template-areas: "notandoSeis"
+                "notandoCinco"
+                "notandoCuatro"
+                "notandoTres"
+                "notandoDos"
+                "notandoUno"
+                "notando-meaning";
+                gap: 18px;}
+
+            }
+
+
+        

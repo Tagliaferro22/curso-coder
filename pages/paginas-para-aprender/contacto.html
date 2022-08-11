@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/contacto.css">
+    <title>Contacto</title>
+</head>
+<body class="cuerpoCompleto">
+    <header class="cabecera"><h1 class="title">Ponte en contacto conmigo</h1></header>
+    <nav class="barraDeNavegacion">
+        <ul class="menu">
+            <li class="portafolio"><a href="portafolio.html">Portafolio</a></li>
+            <li class="inicio"><a href="index.html">Inicio</a></li>
+        </ul>
+    </nav>
+    <main class="cuerpoVisible">
+        <form class="formulario">
+            <div class="entrada"><label for="nombre-de-contacto">Nombre*:</label> 
+                <input type="text" required placeholder="¿Como te llamas?" name="nombre-de-contacto" id="nombre-de-contacto" maxlength="25" class="datos"></div>
+            <div class="entrada"><label for="email">Email*:  </label>
+                <input type="email" required placeholder="¿Cómo es tu email?" id="email" name="email-de-contacto" class="datos"></div>
+            <div class="entrada"><label for="text">Mensaje: </label> <br>
+                <textarea name="mensaje" id="text" cols="30" rows="10" class="datos"></textarea></div>
+            <div class="entrada"><input type="submit" value="Enviar" class="boton"></div>
+        </form>
+        <div class="imagenes">
+            <img src="/assets/img/telefono.png" alt="Imagen de telefono" class="img-index">
+        </div>
+    </main>
+    <footer class="pieDePagina">
+        <p class="textoPie">Todos los derechos reservados 2022</p>
+    </footer>
+</body>
+</html>

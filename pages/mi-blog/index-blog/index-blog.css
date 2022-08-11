@@ -1,0 +1,131 @@
+* {margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+    /* Color de fondo */
+    .cuerpoCompleto {background-color: #ffba08;}
+    
+    /* header */
+    .cabecera {display: flex;
+        justify-content: center;
+        width: auto;
+        height: auto;
+    padding: auto;
+    margin: 18px;
+    border: 3px solid black;}
+    .title { width: 100%;
+        background-color: #faa307;
+        text-align: center;
+    height: 80%;
+    padding: 1%;
+    margin: auto; }
+    
+    /* nav */
+.barraDeNavegacion {background-color: #f48c06;
+    border: 3px solid black;
+display: grid;
+margin: 18px;
+padding: 18px;
+width: auto;
+justify-content: center;
+}
+.menu-list {display: grid;
+list-style: none;
+grid-template-areas: "notando experiencias aprendizajes"
+"podcast rimando inicio";
+gap: 18px;}
+    li a {color: #d00000;
+        font-size: 1.8rem;
+        text-decoration: none;
+    margin: 1rem;} 
+    
+    /* Main */
+.cuerpoVisible {display: grid;
+    margin: 18px;
+    border: 3px solid black;
+    padding: 18px;
+    height: 100%;
+    width: auto;
+    background-color: #e85d04;
+}
+    
+    
+    /* imagen */
+    .imagenes {
+        margin: 18px;
+        border: 3px solid black;
+        padding: 18px;
+        height: 50%;
+        width: 40%;
+    background-color: #dc2f02;}
+    .img-index {width: 50%;
+    height: auto;}
+
+    /* entrada del blog */
+    .entrada-blog {
+        flex-wrap: wrap;
+        margin: 18px;
+        border: 3px solid black;
+        padding: 18px;
+        height: auto;
+        width: 95%;
+        background-color: #d00000;}
+    
+    /* pie de página */
+    .pieDePagina {display: flex;
+        justify-content: center;
+    align-content: flex-end;
+    margin: 18px;
+    border: 3px solid black;
+    padding: 18px;
+    height: auto;
+    width: auto;
+    background-color: #9d0208;}
+    .textoPie {font-family: Verdana, Geneva, Tahoma, sans-serif;}
+
+    /* Media Queries */
+    @media screen and (max-width: 480px){
+        /* NAV */
+    .menu-list {
+    gap: 9px;}
+        li a {color: #d00000;
+            font-size: 1rem;
+            text-decoration: none;
+        margin: 0.4rem;} 
+    /* main */
+    .cuerpoVisible {padding: 1.125rem;}
+
+
+    /* imagen */
+    .imagenes {
+        padding: auto;
+        height: auto;
+        width: auto}
+    .img-index {width: 100%;}
+ 
+    }
+     
+/* * {margin: 0;
+padding: 0;
+box-sizing: border-box;}
+header, .imagenes{display: flex;
+justify-content: center;}
+img {margin-top: 10px;}
+.list {display: flex;
+justify-content: center;
+flex-direction: row;}
+nav ul li {display:flex;
+    flex-direction: row;
+ margin: 18px;}
+ .fondoblog, nav, div.imagenes, header {background-color: #e5e;}
+.entrada-blog {margin: 18px;
+    border: 3px solid orange;
+background-color: cyan;}
+.fondoblog, .entrada-blog {display: flex;
+flex-wrap: wrap;}
+ul.menu-list {background-color: cyan;
+display: flex;
+justify-content: center;
+border: 3px solid orange;
+margin: 18px;}
+body {background-color: #e5e;} */
