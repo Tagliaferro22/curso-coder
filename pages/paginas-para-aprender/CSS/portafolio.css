@@ -40,12 +40,17 @@
         font-size: 2.4rem;
         text-decoration: none;
     margin: 1rem;}
-
+    li {display: flex;
+        justify-content: center;}
+        li a:hover {transform: scale(1.2);
+            background-color: #f48c22;
+        box-shadow: 4px 4px 10px black;
+        transition: 1.2s;
+        border-radius: 10px;}
     
     /* Main */
     .cuerpoVisible {display: grid;
-    grid-template-areas: "imagen"
-    "padre";
+    grid-template-areas: "imagen padre";
 width: auto;
 background-color: #e85d04;
 margin: 18px;
@@ -60,9 +65,29 @@ padding: 18px;}
         padding: 18px;
         height: auto;
         width: auto;
-    background-color: #dc2f02;}
+    background-color: #dc2f02;
+    animation-name: subiendoYBajando;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;}
     .img-index {width: 100%;
     height: auto;}
+    @keyframes subiendoYBajando {
+        0% {padding: 18px;}
+        25% {padding-top: 9px;
+            padding-bottom: 27px;}
+        50% {padding-top: 18px;
+            padding-bottom: 18px;}
+        75%{padding-top: 27px;
+            padding-bottom: 9px;}
+        80% {padding-top: 36px;}
+        85% {padding-top: 45px;}
+        90%{padding-top: 54px;}
+        95%{padding-top: 100%;}
+        100%{padding-top: 18px;
+            padding-bottom: 18px;}
+    }
+    
 
     /* Padre */
     .padre {display: grid;
@@ -95,6 +120,8 @@ padding: 18px;}
     .textoPie {font-family: Verdana, Geneva, Tahoma, sans-serif;}
     
 @media screen and (max-width: 480px){
+    .cuerpoVisible {grid-template-areas: "imagen"
+        "padre";}
     li a {font-size: 1.4rem;}
 }
 
