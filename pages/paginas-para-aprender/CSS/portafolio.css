@@ -50,7 +50,7 @@
     
     /* Main */
     .cuerpoVisible {display: grid;
-    grid-template-areas: "imagen padre";
+    grid-template-areas: "imagen padre carta";
 width: auto;
 background-color: #e85d04;
 margin: 18px;
@@ -107,6 +107,9 @@ padding: 18px;}
         width: 40%;
         background-color: #d00000;} */
     
+/* Carta */
+.carta {background-color: #e85d04;}
+
     /* pie de página */
     .pieDePagina {display: flex;
         justify-content: center;
