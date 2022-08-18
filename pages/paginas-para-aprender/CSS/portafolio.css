@@ -108,7 +108,11 @@ padding: 18px;}
         background-color: #d00000;} */
     
 /* Carta */
-.carta {background-color: #e85d04;}
+.carta {grid-area: carta;
+    background-color: #e85d04;
+margin: 18px;
+padding: 18px;
+}
 
     /* pie de página */
     .pieDePagina {display: flex;
@@ -126,6 +130,24 @@ padding: 18px;}
     .cuerpoVisible {grid-template-areas: "imagen"
         "padre";}
     li a {font-size: 1.4rem;}
+}
+@media (max-width: 768px) and (min-width: 481px) {
+    
+    /* Nav */
+    .menu-list {
+        gap: 9px;}
+            li a {
+                font-size:  1.4rem;
+            margin: 0.4rem;} 
+            ul {height: 1.875rem;}
+            li {display: flex;
+            align-items: center;}
+
+    /* main */
+    .cuerpoVisible {display: grid;
+        grid-template-areas: "imagen"
+        "padre"
+        "carta";}
 }
 
 

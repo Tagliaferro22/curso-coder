@@ -126,6 +126,7 @@ background-color: #9d0208;}
 .texto {font-family: Verdana, Geneva, Tahoma, sans-serif;}
 
 /* Media Queries */
+
 @media screen and (max-width: 480px){
 
            /* Nav */
@@ -147,6 +148,26 @@ background-color: #9d0208;}
 
 /* Padre */
 .padre {width: auto;}
+} 
+@media (max-width: 768px) and (min-width: 481px) {
+    /* Nav */
+    .menu-list {
+        gap: 9px;}
+            li a {
+                font-size:  1.4rem;
+            margin: 0.4rem;} 
+            ul {height: 1.875rem;}
+            li {display: flex;
+            align-items: center;}
+    /* main */
+    .cuerpoVisible {display: grid;
+        grid-template-areas: "imagen"
+        "padre"
+        "padre-texto";
+        padding: 18px;}
+ /* imagen */
+.imagenes{width: auto;}
 
-
+/* Padre */
+.padre {width: auto;}
 }
