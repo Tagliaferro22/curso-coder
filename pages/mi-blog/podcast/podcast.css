@@ -70,7 +70,7 @@ margin: auto; }
             font-size: 1.8rem;
             text-decoration: none;
         margin: 1rem;} 
-        li.notando {grid-area: notando;}
+    li.notando {grid-area: notando;}
     li.experiencias {grid-area: experiencias;}
     li.aprendizajes {grid-area: aprendizajes;}
     li.rimando {grid-area: rimando;}

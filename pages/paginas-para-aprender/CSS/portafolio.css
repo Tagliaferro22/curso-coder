@@ -149,29 +149,3 @@ padding: 18px;
         "padre"
         "carta";}
 }
-
-
-
-
-/* *{margin: 0;
-padding: 0;
-box-sizing: border-box;}
-header {display: flex;
-justify-content: center;
-flex-direction: column;}
-ul.menu-navegation {display: flex;
-    justify-content: space-evenly ;}
-nav ul li{display: flex;}
-
-main {border: 3px solid black;
-    background-color: #e5e;
-margin: 18px;}
-nav, .title {margin: 18px;
-background-color: #e5e;
-border: 3px solid black;}
-body, img{background-color: red;}
-footer {display: flex;
-    justify-content: center;
-align-content: flex-end;}
-img {width: 200px;}
-.texto {font-family: Verdana, Geneva, Tahoma, sans-serif;} */

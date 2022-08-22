@@ -1,0 +1,129 @@
+@import "utilities/variables";
+/* Reset */
+* {margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+/* Color de fondo */
+body.cuerpoCompleto {background-color: $colorDeFondo;}
+/* Cabecera */
+.cabecera {display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding: auto;
+    margin: 18px;
+    border: 3px solid black;
+    .title { width: 100%;
+    background-color: $colorDeFondoTitle;
+    font-size: 3rem;
+    text-align: center;
+height: 80%;
+padding: 1%;
+margin: auto;}
+}
+    /* imagen */
+    .imagenes {display: flex;
+        justify-content: center;
+        margin: 18px;
+        border: 3px solid black;
+        width: auto;
+        background-color: $colorDeFondoImagen;
+        animation-name: subiendoYBajando;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        .img-index {width: auto;}
+        @keyframes subiendoYBajando {
+            0% {padding: 18px;}
+            25% {padding-top: 9px;
+                padding-bottom: 27px;}
+            50% {padding-top: 18px;
+                padding-bottom: 18px;}
+            75%{padding-top: 27px;
+                padding-bottom: 9px;}
+            100%{padding-top: 18px;
+                padding-bottom: 18px;}
+        }}
+       /* nav */
+   .barraDeNavegacion {background-color: $colorDeFondoNav;
+    border: 3px solid rgb(0, 0, 0);
+    border-style: ridge;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    margin: 18px;
+    padding: 18px;
+    width: auto;
+    .menu-list {display: grid;
+        list-style: none;
+        grid-template-areas: "experiencias notando aprendizajes"
+        "rimando . inicio";
+        gap: 18px;
+        li {display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 80%;
+         margin: 18px;
+         a {color: $colorDeFondoEntradaBlog;
+            font-size: 1.8rem;
+            text-decoration: none;
+        margin: 1rem;}
+        a:hover {transform: scale(1.2);
+            background-color: #f48c22;
+        box-shadow: 4px 4px 10px black;
+        transition: 1.2s;
+        border-radius: 10px;}}
+        li.notando {grid-area: notando;}
+        li.experiencias {grid-area: experiencias;}
+        li.aprendizajes {grid-area: aprendizajes;}
+        li.rimando {grid-area: rimando;}
+        li.inicio {grid-area: inicio;}}}
+          /* Main */
+          .cuerpoVisible {
+            margin: 18px;
+         border: 3px solid black;
+         padding: 27px;
+         height: 100%;
+         width: auto;
+         background-color: $colorDeFondoMain;
+         .seccion {display: grid;
+        padding: 18px;
+    gap: 18px;
+    /* Entradas del podcast */
+.entrada-blog {display: grid;
+    margin: 18px;
+    border: 3px solid black;
+    padding: 18px;
+    height: auto;
+    width: auto;
+    background-color: $colorDeFondoEntradaBlog;
+    .sub-title {text-align: center;
+        font-size: 27px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: inherit;}
+    .texto {margin: 18px;
+            padding: 18px;}
+    .formatoAudio {margin: 18px;}}}} 
+     /* pie de página */
+     .pieDePagina {display: flex;
+        justify-content: center;
+    align-content: flex-end;
+    margin: 18px;
+    border: 3px solid black;
+    padding: 18px;
+    height: auto;
+    width: auto;
+    background-color: $colorDeFondoFooter;
+    .textoPie {font-family: Verdana, Geneva, Tahoma, sans-serif;}}
+    /* Media Queries */
+        @media screen and (max-width: 480px){
+            /* Nav */
+            .menu-list {
+              gap: 9px;
+            li {a {
+                font-size:  1rem;
+            margin: 0.4rem;}}} 
+
+            .seccion {padding: 27px;
+                .entrada-blog {margin: 18px;
+                    padding: 9px;}}}
