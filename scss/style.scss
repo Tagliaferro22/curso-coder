@@ -1,4 +1,6 @@
-@import "utilities/variables";
+@import "base/variables";
+@import "base/mapas";
+
 /* Reset */
 * {margin: 0;
     padding: 0;
@@ -45,7 +47,7 @@ margin: auto;}
                 padding-bottom: 18px;}
         }}
        /* nav */
-   .barraDeNavegacion {background-color: $colorDeFondoNav;
+   .barraDeNavegacionBlog {background-color: $colorDeFondoNav;
     border: 3px solid rgb(0, 0, 0);
     border-style: ridge;
     border-radius: 10px;
@@ -54,17 +56,18 @@ margin: auto;}
     margin: 18px;
     padding: 18px;
     width: auto;
-    .menu-list {display: grid;
+    .menuListBlog {display: grid;
         list-style: none;
         grid-template-areas: "experiencias notando aprendizajes"
         "rimando . inicio";
         gap: 18px;
         li {display: flex;
             justify-content: center;
+            align-items: center;
             width: 100%;
             height: 80%;
          margin: 18px;
-         a {color: $colorDeFondoEntradaBlog;
+         a {color: $colorDeTextoNav;
             font-size: 1.8rem;
             text-decoration: none;
         margin: 1rem;}
@@ -78,6 +81,7 @@ margin: auto;}
         li.aprendizajes {grid-area: aprendizajes;}
         li.rimando {grid-area: rimando;}
         li.inicio {grid-area: inicio;}}}
+
           /* Main */
           .cuerpoVisible {
             margin: 18px;
@@ -87,23 +91,37 @@ margin: auto;}
          width: auto;
          background-color: $colorDeFondoMain;
          .seccion {display: grid;
-        padding: 18px;
-    gap: 18px;
-    /* Entradas del podcast */
-.entrada-blog {display: grid;
+            grid-template-areas: "notandoSeis notando-meaning"
+            "notandoCinco notandoCinco"
+            "notandoCuatro notandoCuatro"
+            "notandoTres notandoTres"
+            "notandoDos notandoDos"
+            "notandoUno notandoUno";
+            gap: 18px;
+    /* Entradas del blog */
+.entradaBlog {display: grid;
+    color: $colorDelTiempo;
     margin: 18px;
-    border: 3px solid black;
     padding: 18px;
     height: auto;
     width: auto;
-    background-color: $colorDeFondoEntradaBlog;
-    .sub-title {text-align: center;
+    background-color: $colorDeFondoNav;
+    .subTitle {text-align: center;
         font-size: 27px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-weight: inherit;}
     .texto {margin: 18px;
-            padding: 18px;}
-    .formatoAudio {margin: 18px;}}}} 
+            color: $colorDeTextoBlog1;
+            padding: 18px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+    .formatoAudio {margin: 18px;}}
+    .notandoUno {grid-area: notandoUno;}
+    .notandoDos {grid-area: notandoDos;}
+    .notandoTres {grid-area: notandoTres;}
+    .notandoCuatro {grid-area: notandoCuatro;}
+    .notandoCinco {grid-area: notandoCinco;}
+    .notandoSeis {grid-area: notandoSeis;}}} 
      /* pie de página */
      .pieDePagina {display: flex;
         justify-content: center;

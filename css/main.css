@@ -59,7 +59,7 @@ body.cuerpoCompleto {
     padding-bottom: 18px; } }
 
 /* nav */
-.barraDeNavegacion {
+.barraDeNavegacionBlog {
   background-color: #FFAA00;
   border: 3px solid black;
   border-style: ridge;
@@ -69,38 +69,38 @@ body.cuerpoCompleto {
   margin: 18px;
   padding: 18px;
   width: auto; }
-  .barraDeNavegacion .menu-list {
+  .barraDeNavegacionBlog .menuListBlog {
     display: grid;
     list-style: none;
-    grid-template-areas: "experiencias notando aprendizajes"
- "rimando . inicio";
+    grid-template-areas: "experiencias notando aprendizajes" "rimando . inicio";
     gap: 18px; }
-    .barraDeNavegacion .menu-list li {
+    .barraDeNavegacionBlog .menuListBlog li {
       display: flex;
       justify-content: center;
+      align-items: center;
       width: 100%;
       height: 80%;
       margin: 18px; }
-      .barraDeNavegacion .menu-list li a {
+      .barraDeNavegacionBlog .menuListBlog li a {
         color: #d00000;
         font-size: 1.8rem;
         text-decoration: none;
         margin: 1rem; }
-      .barraDeNavegacion .menu-list li a:hover {
+      .barraDeNavegacionBlog .menuListBlog li a:hover {
         transform: scale(1.2);
         background-color: #f48c22;
         box-shadow: 4px 4px 10px black;
         transition: 1.2s;
         border-radius: 10px; }
-    .barraDeNavegacion .menu-list li.notando {
+    .barraDeNavegacionBlog .menuListBlog li.notando {
       grid-area: notando; }
-    .barraDeNavegacion .menu-list li.experiencias {
+    .barraDeNavegacionBlog .menuListBlog li.experiencias {
       grid-area: experiencias; }
-    .barraDeNavegacion .menu-list li.aprendizajes {
+    .barraDeNavegacionBlog .menuListBlog li.aprendizajes {
       grid-area: aprendizajes; }
-    .barraDeNavegacion .menu-list li.rimando {
+    .barraDeNavegacionBlog .menuListBlog li.rimando {
       grid-area: rimando; }
-    .barraDeNavegacion .menu-list li.inicio {
+    .barraDeNavegacionBlog .menuListBlog li.inicio {
       grid-area: inicio; }
 
 /* Main */
@@ -113,27 +113,41 @@ body.cuerpoCompleto {
   background-color: #e85d04; }
   .cuerpoVisible .seccion {
     display: grid;
-    padding: 18px;
-    gap: 18px;} 
-    /* Entradas del podcast */
-    .cuerpoVisible .seccion .entrada-blog {
+    grid-template-areas: "notandoSeis notando-meaning" "notandoCinco notandoCinco" "notandoCuatro notandoCuatro" "notandoTres notandoTres" "notandoDos notandoDos" "notandoUno notandoUno";
+    gap: 18px;
+    /* Entradas del blog */ }
+    .cuerpoVisible .seccion .entradaBlog {
       display: grid;
+      color: #20b439;
       margin: 18px;
-      border: 3px solid black;
       padding: 18px;
       height: auto;
       width: auto;
-      background-color: #d00000; }
-      .cuerpoVisible .seccion .entrada-blog .sub-title {
+      background-color: #FFAA00; }
+      .cuerpoVisible .seccion .entradaBlog .subTitle {
         text-align: center;
         font-size: 27px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-weight: inherit; }
-      .cuerpoVisible .seccion .entrada-blog .texto {
+      .cuerpoVisible .seccion .entradaBlog .texto {
         margin: 18px;
-        padding: 18px; }
-      .cuerpoVisible .seccion .entrada-blog .formatoAudio {
+        color: #002df7;
+        padding: 18px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+      .cuerpoVisible .seccion .entradaBlog .formatoAudio {
         margin: 18px; }
+    .cuerpoVisible .seccion .notandoUno {
+      grid-area: notandoUno; }
+    .cuerpoVisible .seccion .notandoDos {
+      grid-area: notandoDos; }
+    .cuerpoVisible .seccion .notandoTres {
+      grid-area: notandoTres; }
+    .cuerpoVisible .seccion .notandoCuatro {
+      grid-area: notandoCuatro; }
+    .cuerpoVisible .seccion .notandoCinco {
+      grid-area: notandoCinco; }
+    .cuerpoVisible .seccion .notandoSeis {
+      grid-area: notandoSeis; }
 
 /* pie de página */
 .pieDePagina {
