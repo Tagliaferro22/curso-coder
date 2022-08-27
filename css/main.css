@@ -28,7 +28,7 @@ body.cuerpoCompleto {
     margin: auto; }
 
 /* imagen */
-.imagenes {
+.imagenesBlog {
   display: flex;
   justify-content: center;
   margin: 18px;
@@ -39,7 +39,7 @@ body.cuerpoCompleto {
   animation-duration: 10s;
   animation-timing-function: linear;
   animation-iteration-count: infinite; }
-  .imagenes .img-index {
+  .imagenesBlog .img-index {
     width: auto; }
 
 @keyframes subiendoYBajando {
@@ -58,7 +58,8 @@ body.cuerpoCompleto {
     padding-top: 18px;
     padding-bottom: 18px; } }
 
-/* nav */
+/* Parte del blog */
+/* Nav */
 .barraDeNavegacionBlog {
   background-color: #FFAA00;
   border: 3px solid black;
@@ -103,6 +104,65 @@ body.cuerpoCompleto {
     .barraDeNavegacionBlog .menuListBlog li.inicio {
       grid-area: inicio; }
 
+/* Parte del sitio principal */
+/* nav */
+.barraDeNavegacion {
+  background-color: #f48c06;
+  border: 3px solid black;
+  display: grid;
+  grid-template-areas: "menu";
+  text-align: center;
+  margin: 18px;
+  padding: 18px;
+  width: auto; }
+  .barraDeNavegacion .menuListContacto {
+    grid-area: menu;
+    display: grid;
+    grid-template-areas: "portafolio . inicio";
+    list-style: none; }
+    .barraDeNavegacion .menuListContacto li {
+      display: flex;
+      justify-content: center; }
+      .barraDeNavegacion .menuListContacto li a {
+        color: #d00000;
+        font-size: 2.4rem;
+        text-decoration: none;
+        margin: 1rem; }
+      .barraDeNavegacion .menuListContacto li a:hover {
+        transform: scale(1.2);
+        background-color: #f48c22;
+        box-shadow: 4px 4px 10px black;
+        transition: 1.2s;
+        border-radius: 10px; }
+    .barraDeNavegacion .menuListContacto .portafolio {
+      grid-area: portafolio; }
+    .barraDeNavegacion .menuListContacto .inicio {
+      grid-area: inicio; }
+  .barraDeNavegacion .menuList {
+    grid-area: menu;
+    display: grid;
+    grid-template-areas: "inicio . contacto";
+    list-style: none; }
+    .barraDeNavegacion .menuList li {
+      display: flex;
+      justify-content: center; }
+      .barraDeNavegacion .menuList li a {
+        color: #d00000;
+        font-size: 2.4rem;
+        text-decoration: none;
+        margin: 1rem; }
+      .barraDeNavegacion .menuList li a:hover {
+        transform: scale(1.2);
+        background-color: #f48c22;
+        box-shadow: 4px 4px 10px black;
+        transition: 1.2s;
+        border-radius: 10px; }
+    .barraDeNavegacion .menuList .contacto {
+      grid-area: contacto; }
+    .barraDeNavegacion .menuList .inicio {
+      grid-area: inicio; }
+
+/* Parte del blog */
 /* Main */
 .cuerpoVisible {
   margin: 18px;
@@ -111,12 +171,12 @@ body.cuerpoCompleto {
   height: 100%;
   width: auto;
   background-color: #e85d04; }
-  .cuerpoVisible .seccion {
+  .cuerpoVisible .seccionNotando {
     display: grid;
     grid-template-areas: "notandoSeis notando-meaning" "notandoCinco notandoCinco" "notandoCuatro notandoCuatro" "notandoTres notandoTres" "notandoDos notandoDos" "notandoUno notandoUno";
     gap: 18px;
     /* Entradas del blog */ }
-    .cuerpoVisible .seccion .entradaBlog {
+    .cuerpoVisible .seccionNotando .entradaBlog {
       display: grid;
       color: #20b439;
       margin: 18px;
@@ -124,30 +184,145 @@ body.cuerpoCompleto {
       height: auto;
       width: auto;
       background-color: #FFAA00; }
-      .cuerpoVisible .seccion .entradaBlog .subTitle {
+      .cuerpoVisible .seccionNotando .entradaBlog .subTitle {
         text-align: center;
         font-size: 27px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-weight: inherit; }
-      .cuerpoVisible .seccion .entradaBlog .texto {
+      .cuerpoVisible .seccionNotando .entradaBlog .texto {
         margin: 18px;
         color: #002df7;
         padding: 18px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
-      .cuerpoVisible .seccion .entradaBlog .formatoAudio {
+      .cuerpoVisible .seccionNotando .entradaBlog .formatoAudio {
         margin: 18px; }
-    .cuerpoVisible .seccion .notandoUno {
+    .cuerpoVisible .seccionNotando .notandoUno {
       grid-area: notandoUno; }
-    .cuerpoVisible .seccion .notandoDos {
+    .cuerpoVisible .seccionNotando .notandoDos {
       grid-area: notandoDos; }
-    .cuerpoVisible .seccion .notandoTres {
+    .cuerpoVisible .seccionNotando .notandoTres {
       grid-area: notandoTres; }
-    .cuerpoVisible .seccion .notandoCuatro {
+    .cuerpoVisible .seccionNotando .notandoCuatro {
       grid-area: notandoCuatro; }
-    .cuerpoVisible .seccion .notandoCinco {
+    .cuerpoVisible .seccionNotando .notandoCinco {
       grid-area: notandoCinco; }
-    .cuerpoVisible .seccion .notandoSeis {
+    .cuerpoVisible .seccionNotando .notandoSeis {
       grid-area: notandoSeis; }
+
+/* Parte de la página principal */
+/* Main index.html */
+.cuerpoVisiblePrincipal {
+  display: grid;
+  grid-template-areas: "imagen padre";
+  width: auto;
+  background-color: #e85d04;
+  margin: 18px;
+  border: 3px solid black;
+  padding: 18px; }
+  .cuerpoVisiblePrincipal .imagenesPrincipal {
+    grid-area: imagen;
+    margin: 18px;
+    border: 3px solid black;
+    padding: 18px;
+    height: auto;
+    width: auto;
+    background-color: #dc2f02;
+    animation-name: subiendoYBajando;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; }
+    .cuerpoVisiblePrincipal .imagenesPrincipal .imgIndexPrincipal {
+      width: 100%; }
+  .cuerpoVisiblePrincipal .padre {
+    display: grid;
+    grid-area: padre;
+    margin: 18px;
+    border: 3px solid black;
+    padding: 18px;
+    height: auto;
+    width: auto;
+    background-color: #d00000; }
+
+.cuerpoVisiblePrincipalIndex {
+  display: grid;
+  grid-template-areas: "imagen padre padreTexto";
+  gap: 18px;
+  margin: 18px;
+  border: 3px solid black;
+  padding: 18px;
+  height: 100%;
+  width: auto;
+  background-color: #e85d04; }
+  .cuerpoVisiblePrincipalIndex .imagenesPrincipalIndex {
+    grid-area: imagen;
+    display: flex;
+    justify-content: center;
+    margin: 18px;
+    height: auto;
+    width: 100%;
+    padding: 18px;
+    background-color: #dc2f02;
+    animation-name: subiendoYBajando;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; }
+    .cuerpoVisiblePrincipalIndex .imagenesPrincipalIndex .imgIndexPrincipal {
+      width: 100%; }
+  .cuerpoVisiblePrincipalIndex .padreIndex {
+    grid-area: padre;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 18px;
+    padding: 18px;
+    height: auto;
+    width: auto;
+    background-color: #d00000; }
+    .cuerpoVisiblePrincipalIndex .padreIndex .hijo {
+      background-color: aqua;
+      width: 40px;
+      height: 40px;
+      margin: 4px; }
+  .cuerpoVisiblePrincipalIndex .padreTexto {
+    grid-area: padreTexto;
+    margin: 18px;
+    padding: 18px;
+    background-color: #d00; }
+
+/* Main contacto.html */
+.cuerpoVisibleContacto {
+  display: grid;
+  grid-template-areas: "formulario imagen";
+  justify-content: center;
+  margin: 18px;
+  border: 3px solid black;
+  padding: 18px;
+  height: auto;
+  width: auto;
+  background-color: #e85d04; }
+  .cuerpoVisibleContacto .formulario {
+    grid-area: formulario;
+    display: flex;
+    flex-direction: column;
+    margin: 18px;
+    border: 3px solid black;
+    padding: 18px;
+    background-color: #d00000; }
+    .cuerpoVisibleContacto .formulario .entrada {
+      margin: 18px;
+      text-align: center; }
+      .cuerpoVisibleContacto .formulario .entrada .datos {
+        background-color: #a50505;
+        border: 1px solid red; }
+  .cuerpoVisibleContacto .imagenesForm {
+    grid-area: imagen;
+    margin: 18px;
+    border: 3px solid black;
+    padding: 18px;
+    height: auto;
+    width: auto;
+    background-color: #dc2f02; }
+    .cuerpoVisibleContacto .imagenesForm .imgIndexForm {
+      width: 100%; }
 
 /* pie de página */
 .pieDePagina {
@@ -176,3 +351,23 @@ body.cuerpoCompleto {
     .seccion .entrada-blog {
       margin: 18px;
       padding: 9px; } }
+
+@media screen and (max-width: 480px) {
+  /* MAIN Y MENU .cuerpoVisible {grid-template-areas: "imagen"
+            "padre";}
+        li a {font-size: 1.4rem;} */ }
+
+@media (max-width: 768px) and (min-width: 481px) {
+  /* NAV = .menuList {
+            gap: 9px;}
+                li a {
+                    font-size:  1.4rem;
+                margin: 0.4rem;} 
+                ul {height: 1.875rem;}
+                li {display: flex;
+                align-items: center;} */
+  /* main =
+        .cuerpoVisible {display: grid;
+            grid-template-areas: "imagen"
+            "padre"
+            "carta";} */ }

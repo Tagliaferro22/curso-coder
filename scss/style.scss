@@ -24,7 +24,7 @@ padding: 1%;
 margin: auto;}
 }
     /* imagen */
-    .imagenes {display: flex;
+    .imagenesBlog {display: flex;
         justify-content: center;
         margin: 18px;
         border: 3px solid black;
@@ -46,7 +46,8 @@ margin: auto;}
             100%{padding-top: 18px;
                 padding-bottom: 18px;}
         }}
-       /* nav */
+       /* Parte del blog */
+       /* Nav */
    .barraDeNavegacionBlog {background-color: $colorDeFondoNav;
     border: 3px solid rgb(0, 0, 0);
     border-style: ridge;
@@ -81,7 +82,52 @@ margin: auto;}
         li.aprendizajes {grid-area: aprendizajes;}
         li.rimando {grid-area: rimando;}
         li.inicio {grid-area: inicio;}}}
+/* Parte del sitio principal */
+/* nav */
+.barraDeNavegacion {background-color: #f48c06;
+    border: 3px solid black;
+    display: grid;
+    grid-template-areas: "menu";
+    text-align: center;
+    margin: 18px;
+    padding: 18px;
+    width: auto;
+    .menuListContacto {grid-area: menu;
+    display: grid;
+grid-template-areas: "portafolio . inicio";
+list-style: none;
+li {display: flex;
+    justify-content: center;
+    a {color: #d00000;
+        font-size: 2.4rem;
+        text-decoration: none;
+    margin: 1rem;}
+    a:hover {transform: scale(1.2);
+        background-color: #f48c22;
+    box-shadow: 4px 4px 10px black;
+    transition: 1.2s;
+    border-radius: 10px;}}
+    .portafolio {grid-area: portafolio;}
+    .inicio {grid-area: inicio;}}
+    .menuList {grid-area: menu;
+        display: grid;
+        grid-template-areas: "inicio . contacto";
+    list-style: none;
+    li {display: flex;
+    justify-content: center;
+    a {color: #d00000;
+        font-size: 2.4rem;
+        text-decoration: none;
+    margin: 1rem;}
+    a:hover {transform: scale(1.2);
+        background-color: #f48c22;
+    box-shadow: 4px 4px 10px black;
+    transition: 1.2s;
+    border-radius: 10px;}}
+    .contacto {grid-area: contacto;}
+    .inicio {grid-area: inicio;}}}
 
+        /* Parte del blog */
           /* Main */
           .cuerpoVisible {
             margin: 18px;
@@ -90,7 +136,7 @@ margin: auto;}
          height: 100%;
          width: auto;
          background-color: $colorDeFondoMain;
-         .seccion {display: grid;
+         .seccionNotando {display: grid;
             grid-template-areas: "notandoSeis notando-meaning"
             "notandoCinco notandoCinco"
             "notandoCuatro notandoCuatro"
@@ -122,6 +168,104 @@ margin: auto;}
     .notandoCuatro {grid-area: notandoCuatro;}
     .notandoCinco {grid-area: notandoCinco;}
     .notandoSeis {grid-area: notandoSeis;}}} 
+
+    /* Parte de la página principal */
+    /* Main index.html */
+    .cuerpoVisiblePrincipal {display: grid;
+        grid-template-areas: "imagen padre";
+    width: auto;
+    background-color: #e85d04;
+    margin: 18px;
+    border: 3px solid black;
+    padding: 18px;
+    .imagenesPrincipal{grid-area: imagen;
+        margin: 18px;
+        border: 3px solid black;
+        padding: 18px;
+        height: auto;
+        width: auto;
+    background-color: #dc2f02;
+    animation-name: subiendoYBajando;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    .imgIndexPrincipal{width: 100%;}}
+    .padre{display: grid;
+        grid-area: padre;
+        margin: 18px;
+        border: 3px solid black;
+        padding: 18px;
+        height: auto;
+        width: auto;
+        background-color: #d00000;}}
+    .cuerpoVisiblePrincipalIndex {display: grid;
+        grid-template-areas: "imagen padre padreTexto";
+        gap: 18px;
+        margin: 18px;
+     border: 3px solid black;
+     padding: 18px;
+     height: 100%;
+     width: auto;
+     background-color: #e85d04;
+    .imagenesPrincipalIndex{grid-area: imagen;
+        display: flex;
+        justify-content: center;
+        margin: 18px;
+        height: auto;
+        width: 100%;
+        padding: 18px;
+    background-color: #dc2f02;
+    animation-name: subiendoYBajando;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    .imgIndexPrincipal{width: 100%;}}
+    .padreIndex{grid-area: padre;
+        display: flex;
+    flex-wrap: wrap;
+    margin: 18px;
+    padding: 18px;
+    height: auto;
+    width: auto;
+    background-color: #d00000;
+    .hijo {background-color: aqua;
+        width: 40px;
+        height: 40px;
+        margin: 4px;}}
+    .padreTexto {grid-area: padreTexto;
+        margin: 18px;
+        padding: 18px;
+        background-color: #d00;}}
+            /* Main contacto.html */
+.cuerpoVisibleContacto {display: grid;
+    grid-template-areas: "formulario imagen";
+    justify-content: center;
+    margin: 18px;
+    border: 3px solid black;
+    padding: 18px;
+    height: auto;
+    width: auto;
+    background-color: #e85d04;
+    .formulario {grid-area: formulario;
+        display: flex;
+       flex-direction: column;
+        margin: 18px;
+        border: 3px solid black;
+        padding: 18px;
+        background-color: #d00000;
+        .entrada {margin: 18px;
+            text-align: center;
+            .datos {background-color: #a50505;
+                border: 1px solid red;}}}
+                .imagenesForm {grid-area: imagen;
+                    margin: 18px;
+                    border: 3px solid black;
+                    padding: 18px;
+                    height: auto;
+                    width: auto;
+                background-color: #dc2f02;
+                .imgIndexForm {width: 100%;}}}
+
      /* pie de página */
      .pieDePagina {display: flex;
         justify-content: center;
@@ -145,3 +289,28 @@ margin: auto;}
             .seccion {padding: 27px;
                 .entrada-blog {margin: 18px;
                     padding: 9px;}}}
+
+    // MEDIA QUERIES DE LA PAGINA PRINCIPAL
+    @media screen and (max-width: 480px){
+     
+        /* MAIN Y MENU .cuerpoVisible {grid-template-areas: "imagen"
+            "padre";}
+        li a {font-size: 1.4rem;} */
+    }
+    @media (max-width: 768px) and (min-width: 481px) {
+        
+        /* NAV = .menuList {
+            gap: 9px;}
+                li a {
+                    font-size:  1.4rem;
+                margin: 0.4rem;} 
+                ul {height: 1.875rem;}
+                li {display: flex;
+                align-items: center;} */
+    
+        /* main =
+        .cuerpoVisible {display: grid;
+            grid-template-areas: "imagen"
+            "padre"
+            "carta";} */
+    }
