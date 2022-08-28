@@ -1,4 +1,7 @@
 @charset "UTF-8";
+.cabecera, .imagenesBlog, .barraDeNavegacionBlog, .barraDeNavegacion, .cuerpoVisible, .cuerpoVisiblePrincipal, .cuerpoVisiblePrincipal .imagenesPrincipal, .cuerpoVisiblePrincipal .padre, .cuerpoVisiblePrincipalIndex, .cuerpoVisibleContacto, .cuerpoVisibleContacto .formulario, .cuerpoVisibleContacto .imagenesForm, .pieDePagina {
+  border: 3px solid #000; }
+
 /* Reset */
 * {
   margin: 0;
@@ -13,8 +16,11 @@
 .cabecera {
   display: flex;
   justify-content: center;
-  margin: 18px;
-  border: 3px solid black; }
+  background-color: #faa307;
+  width: auto;
+  height: auto;
+  padding: 1.125rem;
+  margin: 1.125rem; }
   .cabecera .title {
     width: 100%;
     background-color: #faa307;
@@ -29,7 +35,6 @@
   display: flex;
   justify-content: center;
   margin: 18px;
-  border: 3px solid black;
   width: auto;
   background-color: #dc2f02;
   animation-name: subiendoYBajando;
@@ -59,14 +64,14 @@
 /* Nav */
 .barraDeNavegacionBlog {
   background-color: #FFAA00;
-  border: 3px solid black;
   border-style: ridge;
   border-radius: 10px;
   display: grid;
   justify-content: center;
-  margin: 18px;
-  padding: 18px;
-  width: auto; }
+  width: auto;
+  height: auto;
+  padding: 1.125rem;
+  margin: 1.125rem; }
   .barraDeNavegacionBlog .menuListBlog {
     display: grid;
     list-style: none;
@@ -78,12 +83,18 @@
       align-items: center;
       width: 100%;
       height: 80%;
-      margin: 18px; }
+      width: 100%;
+      height: 80%;
+      padding: auto;
+      margin: auto; }
       .barraDeNavegacionBlog .menuListBlog li a {
         color: #d00000;
         font-size: 1.8rem;
         text-decoration: none;
-        margin: 1rem; }
+        width: auto;
+        height: auto;
+        padding: auto;
+        margin: 1.125rem; }
       .barraDeNavegacionBlog .menuListBlog li a:hover {
         transform: scale(1.2);
         background-color: #f48c22;
@@ -105,13 +116,11 @@
 /* nav */
 .barraDeNavegacion {
   background-color: #f48c06;
-  border: 3px solid black;
   display: grid;
   grid-template-areas: "menu";
   text-align: center;
   margin: 18px;
-  padding: 18px;
-  width: auto; }
+  padding: 18px; }
   .barraDeNavegacion .menuListContacto {
     grid-area: menu;
     display: grid;
@@ -147,6 +156,9 @@
         color: #d00000;
         font-size: 2.4rem;
         text-decoration: none;
+        width: auto;
+        height: auto;
+        padding: auto;
         margin: 1rem; }
       .barraDeNavegacion .menuList li a:hover {
         transform: scale(1.2);
@@ -162,24 +174,23 @@
 /* Parte del blog */
 /* Main */
 .cuerpoVisible {
-  margin: 18px;
-  border: 3px solid black;
-  padding: 27px;
-  height: 100%;
   width: auto;
+  height: 100%;
+  padding: 1.6875rem;
+  margin: 1.125rem;
   background-color: #e85d04; }
   .cuerpoVisible .seccionNotando {
     display: grid;
     grid-template-areas: "notandoSeis notando-meaning" "notandoCinco notandoCinco" "notandoCuatro notandoCuatro" "notandoTres notandoTres" "notandoDos notandoDos" "notandoUno notandoUno";
-    gap: 18px;
+    gap: 9px;
     /* Entradas del blog */ }
     .cuerpoVisible .seccionNotando .entradaBlog {
       display: grid;
       color: #20b439;
-      margin: 18px;
-      padding: 18px;
-      height: auto;
       width: auto;
+      height: auto;
+      padding: 1.125rem;
+      margin: 1.125rem;
       background-color: #FFAA00; }
       .cuerpoVisible .seccionNotando .entradaBlog .subTitle {
         text-align: center;
@@ -187,12 +198,17 @@
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-weight: inherit; }
       .cuerpoVisible .seccionNotando .entradaBlog .texto {
-        margin: 18px;
+        width: auto;
+        height: auto;
+        padding: 1.125rem;
+        margin: 1.125rem;
         color: #002df7;
-        padding: 18px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
       .cuerpoVisible .seccionNotando .entradaBlog .formatoAudio {
-        margin: 18px; }
+        width: auto;
+        height: auto;
+        padding: auto;
+        margin: 1.125rem; }
     .cuerpoVisible .seccionNotando .notandoUno {
       grid-area: notandoUno; }
     .cuerpoVisible .seccionNotando .notandoDos {
@@ -212,77 +228,82 @@
   display: grid;
   grid-template-areas: "imagen padre";
   width: auto;
-  background-color: #e85d04;
-  margin: 18px;
-  border: 3px solid black;
-  padding: 18px; }
+  height: auto;
+  padding: 1.125rem;
+  margin: 1.125rem;
+  background-color: #e85d04; }
   .cuerpoVisiblePrincipal .imagenesPrincipal {
     grid-area: imagen;
-    margin: 18px;
-    border: 3px solid black;
-    padding: 18px;
-    height: auto;
     width: auto;
+    height: auto;
+    padding: 1.125rem;
+    margin: 1.125rem;
     background-color: #dc2f02;
     animation-name: subiendoYBajando;
     animation-duration: 10s;
     animation-timing-function: linear;
     animation-iteration-count: infinite; }
     .cuerpoVisiblePrincipal .imagenesPrincipal .imgIndexPrincipal {
-      width: 100%; }
+      width: 100%;
+      height: auto;
+      padding: 1.125rem;
+      margin: 1.125rem; }
   .cuerpoVisiblePrincipal .padre {
     display: grid;
     grid-area: padre;
-    margin: 18px;
-    border: 3px solid black;
-    padding: 18px;
-    height: auto;
     width: auto;
+    height: auto;
+    padding: 1.125rem;
+    margin: 1.125rem;
     background-color: #d00000; }
 
 .cuerpoVisiblePrincipalIndex {
   display: grid;
   grid-template-areas: "imagen padre padreTexto";
-  gap: 18px;
-  margin: 18px;
-  border: 3px solid black;
-  padding: 18px;
-  height: 100%;
   width: auto;
+  height: 100%;
+  padding: 1.125rem;
+  margin: 1.125rem;
   background-color: #e85d04; }
   .cuerpoVisiblePrincipalIndex .imagenesPrincipalIndex {
     grid-area: imagen;
+    width: auto;
+    height: auto;
+    padding: 1.125rem;
+    margin: 1.125rem;
     display: flex;
     justify-content: center;
-    margin: 18px;
-    height: auto;
-    width: 100%;
-    padding: 18px;
     background-color: #dc2f02;
     animation-name: subiendoYBajando;
     animation-duration: 10s;
     animation-timing-function: linear;
     animation-iteration-count: infinite; }
     .cuerpoVisiblePrincipalIndex .imagenesPrincipalIndex .imgIndexPrincipal {
-      width: 100%; }
+      width: 100%;
+      height: auto;
+      padding: auto;
+      margin: auto; }
   .cuerpoVisiblePrincipalIndex .padreIndex {
     grid-area: padre;
+    width: auto;
+    height: auto;
+    padding: 1.125rem;
+    margin: 1.125rem;
     display: flex;
     flex-wrap: wrap;
-    margin: 18px;
-    padding: 18px;
-    height: auto;
-    width: auto;
     background-color: #d00000; }
     .cuerpoVisiblePrincipalIndex .padreIndex .hijo {
       background-color: aqua;
       width: 40px;
       height: 40px;
+      padding: auto;
       margin: 4px; }
   .cuerpoVisiblePrincipalIndex .padreTexto {
     grid-area: padreTexto;
-    margin: 18px;
-    padding: 18px;
+    width: auto;
+    height: auto;
+    padding: 1.125rem;
+    margin: 1.125rem;
     background-color: #d00000; }
 
 /* Main contacto.html */
@@ -290,43 +311,51 @@
   display: grid;
   grid-template-areas: "formulario imagen";
   justify-content: center;
-  margin: 18px;
-  border: 3px solid black;
-  padding: 18px;
-  height: auto;
   width: auto;
+  height: auto;
+  padding: 1.125rem;
+  margin: 1.125rem;
   background-color: #e85d04; }
   .cuerpoVisibleContacto .formulario {
     grid-area: formulario;
     display: flex;
     flex-direction: column;
-    margin: 18px;
-    border: 3px solid black;
-    padding: 18px;
+    width: auto;
+    height: auto;
+    padding: 1.125rem;
+    margin: 1.125rem;
     background-color: #d00000; }
     .cuerpoVisibleContacto .formulario .entrada {
-      margin: 18px;
+      width: auto;
+      height: auto;
+      padding: auto;
+      margin: 1.125rem;
       text-align: center; }
       .cuerpoVisibleContacto .formulario .entrada .datos {
         background-color: #a50505;
         border: 1px solid red; }
   .cuerpoVisibleContacto .imagenesForm {
     grid-area: imagen;
-    margin: 18px;
-    border: 3px solid black;
-    padding: 18px;
+    width: auto;
+    height: auto;
+    padding: 1.125rem;
+    margin: 1.125rem;
     background-color: #dc2f02; }
     .cuerpoVisibleContacto .imagenesForm .imgIndexForm {
-      width: 100%; }
+      width: 100%;
+      height: auto;
+      padding: auto;
+      margin: auto; }
 
 /* pie de página */
 .pieDePagina {
   display: flex;
   justify-content: center;
   align-content: flex-end;
-  margin: 18px;
-  border: 3px solid black;
-  padding: 18px;
+  width: auto;
+  height: auto;
+  padding: 1.125rem;
+  margin: 1.125rem;
   background-color: #9d0208; }
   .pieDePagina .textoPie {
     font-family: Verdana, Geneva, Tahoma, sans-serif; }
@@ -338,12 +367,20 @@
     gap: 9px; }
     .menu-list li a {
       font-size: 1rem;
+      width: auto;
+      height: auto;
+      padding: auto;
       margin: 0.4rem; }
   .seccion {
-    padding: 27px; }
+    width: auto;
+    height: auto;
+    padding: 1.6875rem;
+    margin: auto; }
     .seccion .entrada-blog {
-      margin: 18px;
-      padding: 9px; } }
+      width: auto;
+      height: auto;
+      padding: 1.125rem;
+      margin: 1.125rem; } }
 
 @media screen and (max-width: 480px) {
   /* MAIN Y MENU .cuerpoVisible {grid-template-areas: "imagen"

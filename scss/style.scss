@@ -11,8 +11,9 @@
 /* Cabecera */
 .cabecera {display: flex;
     justify-content: center;
-    margin: 18px;
-    border: 3px solid black;
+    background-color: map-get($map: $colores, $key: colorDeFondoTitle);
+    @include medidas (auto, auto, 1.125rem, 1.125rem);
+    @extend %border;
     .title { width: 100%;
     background-color: map-get($map: $colores, $key: colorDeFondoTitle);
     font-size: 3rem;
@@ -24,7 +25,7 @@
 .imagenesBlog {display: flex;
         justify-content: center;
         margin: 18px;
-        border: 3px solid black;
+        @extend %border;
         width: auto;
         background-color: map-get($map: $colores, $key: colorDeFondoImagen);
         animation-name: subiendoYBajando;
@@ -46,14 +47,12 @@
        /* Parte del blog */
        /* Nav */
    .barraDeNavegacionBlog {background-color: map-get($map: $colores, $key: colorDeFondoNav);
-    border: 3px solid rgb(0, 0, 0);
+    @extend %border;
     border-style: ridge;
     border-radius: 10px;
     display: grid;
     justify-content: center;
-    margin: 18px;
-    padding: 18px;
-    width: auto;
+    @include medidas (auto, auto, 1.125rem, 1.125rem);
     .menuListBlog {display: grid;
         list-style: none;
         grid-template-areas: "experiencias notando aprendizajes"
@@ -64,11 +63,11 @@
             align-items: center;
             width: 100%;
             height: 80%;
-         margin: 18px;
-         a {color: map-get($map: $colores, $key: colorDeTextoNav);
+            @include medidas (100%, 80%, auto, auto);
+            a {color: map-get($map: $colores, $key: colorDeTextoNav);
             font-size: 1.8rem;
             text-decoration: none;
-        margin: 1rem;}
+            @include medidas (auto, auto, auto, 1.125rem);}
         a:hover {transform: scale(1.2);
             background-color: #f48c22;
         box-shadow: 4px 4px 10px black;
@@ -82,6 +81,7 @@
 /* Parte del sitio principal */
 /* nav */
 .barraDeNavegacion {@include barraDeNavegacion;
+    @extend %border;
     .menuListContacto {grid-area: menu;
                             display: grid;
                             grid-template-areas: "portafolio . inicio";
@@ -108,7 +108,7 @@
     a {color: map-get($map: $colores, $key: colorDeTextoNav);
         font-size: 2.4rem;
         text-decoration: none;
-    margin: 1rem;}
+        @include medidas (auto, auto, auto, 1rem);}
     a:hover {transform: scale(1.2);
         background-color: #f48c22;
     box-shadow: 4px 4px 10px black;
@@ -120,11 +120,8 @@
         /* Parte del blog */
           /* Main */
           .cuerpoVisible {
-            margin: 18px;
-         border: 3px solid black;
-         padding: 27px;
-         height: 100%;
-         width: auto;
+            @include medidas (auto, 100%, 1.6875rem, 1.125rem);
+            @extend %border;
          background-color: map-get($map: $colores, $key: colorDeFondoMain);
          .seccionNotando {display: grid;
             grid-template-areas: "notandoSeis notando-meaning"
@@ -133,25 +130,22 @@
             "notandoTres notandoTres"
             "notandoDos notandoDos"
             "notandoUno notandoUno";
-            gap: 18px;
+            gap: 9px;
     /* Entradas del blog */
 .entradaBlog {display: grid;
     color: map-get($map: $colores, $key: colorDelTiempo);
-    margin: 18px;
-    padding: 18px;
-    height: auto;
-    width: auto;
+    @include medidas (auto, auto, 1.125rem, 1.125rem);
     background-color: map-get($map: $colores, $key: colorDeFondoNav);
     .subTitle {text-align: center;
         font-size: 27px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-weight: inherit;}
-    .texto {margin: 18px;
+    .texto {@include medidas (auto, auto, 1.125rem, 1.125rem);
             color: map-get($map: $colores, $key: colorDeTextoBlog1);
-            padding: 18px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-    .formatoAudio {margin: 18px;}}
+    .formatoAudio {@include medidas (auto, auto, auto, 1.125rem);
+    }}
     .notandoUno {grid-area: notandoUno;}
     .notandoDos {grid-area: notandoDos;}
     .notandoTres {grid-area: notandoTres;}
@@ -163,104 +157,78 @@
     /* Main index.html */
     .cuerpoVisiblePrincipal {display: grid;
         grid-template-areas: "imagen padre";
-    width: auto;
+        @include medidas (auto, auto, 1.125rem, 1.125rem);
     background-color: map-get($map: $colores, $key: colorDeFondoMain);
-    margin: 18px;
-    border: 3px solid black;
-    padding: 18px;
+    @extend %border;
     .imagenesPrincipal{grid-area: imagen;
-        margin: 18px;
-        border: 3px solid black;
-        padding: 18px;
-        height: auto;
-        width: auto;
+        @include medidas (auto, auto, 1.125rem, 1.125rem);
+        @extend %border;
     background-color: map-get($map: $colores, $key: colorDeFondoImagen);
     animation-name: subiendoYBajando;
     animation-duration: 10s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    .imgIndexPrincipal{width: 100%;}}
+    .imgIndexPrincipal{@include medidas (100%, auto, 1.125rem, 1.125rem);
+    }}
     .padre{display: grid;
         grid-area: padre;
-        margin: 18px;
-        border: 3px solid black;
-        padding: 18px;
-        height: auto;
-        width: auto;
+        @include medidas (auto, auto, 1.125rem, 1.125rem);
+        @extend %border;
         background-color: map-get($map: $colores, $key: colorDeTextoNav);}}
     .cuerpoVisiblePrincipalIndex {display: grid;
         grid-template-areas: "imagen padre padreTexto";
-        gap: 18px;
-        margin: 18px;
-     border: 3px solid black;
-     padding: 18px;
-     height: 100%;
-     width: auto;
+        @include medidas (auto, 100%, 1.125rem, 1.125rem);
+        @extend %border;
      background-color: map-get($map: $colores, $key: colorDeFondoMain);
     .imagenesPrincipalIndex{grid-area: imagen;
+        @include medidas (auto, auto, 1.125rem, 1.125rem);
         display: flex;
         justify-content: center;
-        margin: 18px;
-        height: auto;
-        width: 100%;
-        padding: 18px;
     background-color: map-get($map: $colores, $key: colorDeFondoImagen);
     animation-name: subiendoYBajando;
     animation-duration: 10s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    .imgIndexPrincipal{width: 100%;}}
+    .imgIndexPrincipal{@include medidas (100%, auto, auto, auto);}}
     .padreIndex{grid-area: padre;
+        @include medidas (auto, auto, 1.125rem, 1.125rem);
         display: flex;
     flex-wrap: wrap;
-    margin: 18px;
-    padding: 18px;
-    height: auto;
-    width: auto;
     background-color: map-get($map: $colores, $key: colorDeTextoNav);
     .hijo {background-color: map-get($map: $colores, $key: colorDelHijo);
-        width: 40px;
-        height: 40px;
-        margin: 4px;}}
+        @include medidas (40px, 40px, auto, 4px);}}
     .padreTexto {grid-area: padreTexto;
-        margin: 18px;
-        padding: 18px;
+        @include medidas (auto, auto, 1.125rem, 1.125rem);
         background-color: map-get($map: $colores, $key: colorDeTextoNav);}}
             /* Main contacto.html */
 .cuerpoVisibleContacto {display: grid;
     grid-template-areas: "formulario imagen";
     justify-content: center;
-    margin: 18px;
-    border: 3px solid black;
-    padding: 18px;
-    height: auto;
-    width: auto;
+    @include medidas (auto, auto, 1.125rem, 1.125rem);
+    @extend %border;
     background-color: map-get($map: $colores, $key: colorDeFondoMain);
     .formulario {grid-area: formulario;
         display: flex;
        flex-direction: column;
-        margin: 18px;
-        border: 3px solid black;
-        padding: 18px;
+       @include medidas (auto, auto, 1.125rem, 1.125rem);
+       @extend %border;
         background-color: map-get($map: $colores, $key: colorDeTextoNav);
-        .entrada {margin: 18px;
+        .entrada {@include medidas (auto, auto, auto, 1.125rem);
             text-align: center;
             .datos {background-color: map-get($map: $colores, $key: colorDeDatos);
                 border: 1px solid red;}}}
                 .imagenesForm {grid-area: imagen;
-                    margin: 18px;
-                    border: 3px solid black;
-                    padding: 18px;
+                    @include medidas (auto, auto, 1.125rem, 1.125rem);
+                    @extend %border;
                 background-color: map-get($map: $colores, $key: colorDeFondoImagen);
-                .imgIndexForm {width: 100%;}}}
+                .imgIndexForm {@include medidas (100%, auto, auto, auto);}}}
 
      /* pie de página */
      .pieDePagina {display: flex;
         justify-content: center;
     align-content: flex-end;
-    margin: 18px;
-    border: 3px solid black;
-    padding: 18px;
+    @include medidas (auto, auto, 1.125rem, 1.125rem);
+    @extend %border;
     background-color: map-get($map: $colores, $key: colorDeFondoFooter);
     .textoPie {font-family: Verdana, Geneva, Tahoma, sans-serif;}}
     /* Media Queries */
@@ -270,11 +238,10 @@
               gap: 9px;
             li {a {
                 font-size:  1rem;
-            margin: 0.4rem;}}} 
+                @include medidas (auto, auto, auto, 0.4rem);}}} 
 
-            .seccion {padding: 27px;
-                .entrada-blog {margin: 18px;
-                    padding: 9px;}}}
+            .seccion {@include medidas (auto, auto, 1.6875rem, auto);
+                .entrada-blog {@include medidas (auto, auto, 1.125rem, 1.125rem);}}}
 
     // MEDIA QUERIES DE LA PAGINA PRINCIPAL
     @media screen and (max-width: 480px){
