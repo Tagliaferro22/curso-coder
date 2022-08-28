@@ -6,16 +6,13 @@
   box-sizing: border-box; }
 
 /* Color de fondo */
-body.cuerpoCompleto {
+.cuerpoCompleto {
   background-color: #ffba08; }
 
 /* Cabecera */
 .cabecera {
   display: flex;
   justify-content: center;
-  width: auto;
-  height: auto;
-  padding: auto;
   margin: 18px;
   border: 3px solid black; }
   .cabecera .title {
@@ -286,7 +283,7 @@ body.cuerpoCompleto {
     grid-area: padreTexto;
     margin: 18px;
     padding: 18px;
-    background-color: #d00; }
+    background-color: #d00000; }
 
 /* Main contacto.html */
 .cuerpoVisibleContacto {
@@ -318,8 +315,6 @@ body.cuerpoCompleto {
     margin: 18px;
     border: 3px solid black;
     padding: 18px;
-    height: auto;
-    width: auto;
     background-color: #dc2f02; }
     .cuerpoVisibleContacto .imagenesForm .imgIndexForm {
       width: 100%; }
@@ -332,8 +327,6 @@ body.cuerpoCompleto {
   margin: 18px;
   border: 3px solid black;
   padding: 18px;
-  height: auto;
-  width: auto;
   background-color: #9d0208; }
   .pieDePagina .textoPie {
     font-family: Verdana, Geneva, Tahoma, sans-serif; }

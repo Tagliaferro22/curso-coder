@@ -1,35 +1,32 @@
-@import "base/variables";
 @import "base/mapas";
+@import "base/extend";
+@import "base/mixin";
 
 /* Reset */
 * {margin: 0;
     padding: 0;
     box-sizing: border-box;}
 /* Color de fondo */
-body.cuerpoCompleto {background-color: $colorDeFondo;}
+.cuerpoCompleto {background-color: map-get($map: $colores, $key: colorDeFondo);}
 /* Cabecera */
 .cabecera {display: flex;
     justify-content: center;
-    width: auto;
-    height: auto;
-    padding: auto;
     margin: 18px;
     border: 3px solid black;
     .title { width: 100%;
-    background-color: $colorDeFondoTitle;
+    background-color: map-get($map: $colores, $key: colorDeFondoTitle);
     font-size: 3rem;
     text-align: center;
-height: 80%;
-padding: 1%;
-margin: auto;}
-}
+    height: 80%;
+    padding: 1%;
+    margin: auto;}}
     /* imagen */
-    .imagenesBlog {display: flex;
+.imagenesBlog {display: flex;
         justify-content: center;
         margin: 18px;
         border: 3px solid black;
         width: auto;
-        background-color: $colorDeFondoImagen;
+        background-color: map-get($map: $colores, $key: colorDeFondoImagen);
         animation-name: subiendoYBajando;
         animation-duration: 10s;
         animation-timing-function: linear;
@@ -48,7 +45,7 @@ margin: auto;}
         }}
        /* Parte del blog */
        /* Nav */
-   .barraDeNavegacionBlog {background-color: $colorDeFondoNav;
+   .barraDeNavegacionBlog {background-color: map-get($map: $colores, $key: colorDeFondoNav);
     border: 3px solid rgb(0, 0, 0);
     border-style: ridge;
     border-radius: 10px;
@@ -68,7 +65,7 @@ margin: auto;}
             width: 100%;
             height: 80%;
          margin: 18px;
-         a {color: $colorDeTextoNav;
+         a {color: map-get($map: $colores, $key: colorDeTextoNav);
             font-size: 1.8rem;
             text-decoration: none;
         margin: 1rem;}
@@ -84,38 +81,31 @@ margin: auto;}
         li.inicio {grid-area: inicio;}}}
 /* Parte del sitio principal */
 /* nav */
-.barraDeNavegacion {background-color: #f48c06;
-    border: 3px solid black;
-    display: grid;
-    grid-template-areas: "menu";
-    text-align: center;
-    margin: 18px;
-    padding: 18px;
-    width: auto;
+.barraDeNavegacion {@include barraDeNavegacion;
     .menuListContacto {grid-area: menu;
-    display: grid;
-grid-template-areas: "portafolio . inicio";
-list-style: none;
-li {display: flex;
-    justify-content: center;
-    a {color: #d00000;
-        font-size: 2.4rem;
-        text-decoration: none;
-    margin: 1rem;}
-    a:hover {transform: scale(1.2);
-        background-color: #f48c22;
-    box-shadow: 4px 4px 10px black;
-    transition: 1.2s;
-    border-radius: 10px;}}
-    .portafolio {grid-area: portafolio;}
-    .inicio {grid-area: inicio;}}
+                            display: grid;
+                            grid-template-areas: "portafolio . inicio";
+                            list-style: none;
+                    li {display: flex;
+                        justify-content: center;
+                        a {color: map-get($map: $colores, $key: colorDeTextoNav);
+                            font-size: 2.4rem;
+                            text-decoration: none;
+                            margin: 1rem;}
+                        a:hover {transform: scale(1.2);
+                                    background-color: map-get($map: $colores, $key: colorDeTransformacion);
+                                    box-shadow: 4px 4px 10px black;
+                                    transition: 1.2s;
+                                    border-radius: 10px;}}
+        .portafolio {grid-area: portafolio;}
+        .inicio {grid-area: inicio;}}
     .menuList {grid-area: menu;
         display: grid;
         grid-template-areas: "inicio . contacto";
     list-style: none;
     li {display: flex;
     justify-content: center;
-    a {color: #d00000;
+    a {color: map-get($map: $colores, $key: colorDeTextoNav);
         font-size: 2.4rem;
         text-decoration: none;
     margin: 1rem;}
@@ -135,7 +125,7 @@ li {display: flex;
          padding: 27px;
          height: 100%;
          width: auto;
-         background-color: $colorDeFondoMain;
+         background-color: map-get($map: $colores, $key: colorDeFondoMain);
          .seccionNotando {display: grid;
             grid-template-areas: "notandoSeis notando-meaning"
             "notandoCinco notandoCinco"
@@ -146,18 +136,18 @@ li {display: flex;
             gap: 18px;
     /* Entradas del blog */
 .entradaBlog {display: grid;
-    color: $colorDelTiempo;
+    color: map-get($map: $colores, $key: colorDelTiempo);
     margin: 18px;
     padding: 18px;
     height: auto;
     width: auto;
-    background-color: $colorDeFondoNav;
+    background-color: map-get($map: $colores, $key: colorDeFondoNav);
     .subTitle {text-align: center;
         font-size: 27px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-weight: inherit;}
     .texto {margin: 18px;
-            color: $colorDeTextoBlog1;
+            color: map-get($map: $colores, $key: colorDeTextoBlog1);
             padding: 18px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -174,7 +164,7 @@ li {display: flex;
     .cuerpoVisiblePrincipal {display: grid;
         grid-template-areas: "imagen padre";
     width: auto;
-    background-color: #e85d04;
+    background-color: map-get($map: $colores, $key: colorDeFondoMain);
     margin: 18px;
     border: 3px solid black;
     padding: 18px;
@@ -184,7 +174,7 @@ li {display: flex;
         padding: 18px;
         height: auto;
         width: auto;
-    background-color: #dc2f02;
+    background-color: map-get($map: $colores, $key: colorDeFondoImagen);
     animation-name: subiendoYBajando;
     animation-duration: 10s;
     animation-timing-function: linear;
@@ -197,7 +187,7 @@ li {display: flex;
         padding: 18px;
         height: auto;
         width: auto;
-        background-color: #d00000;}}
+        background-color: map-get($map: $colores, $key: colorDeTextoNav);}}
     .cuerpoVisiblePrincipalIndex {display: grid;
         grid-template-areas: "imagen padre padreTexto";
         gap: 18px;
@@ -206,7 +196,7 @@ li {display: flex;
      padding: 18px;
      height: 100%;
      width: auto;
-     background-color: #e85d04;
+     background-color: map-get($map: $colores, $key: colorDeFondoMain);
     .imagenesPrincipalIndex{grid-area: imagen;
         display: flex;
         justify-content: center;
@@ -214,7 +204,7 @@ li {display: flex;
         height: auto;
         width: 100%;
         padding: 18px;
-    background-color: #dc2f02;
+    background-color: map-get($map: $colores, $key: colorDeFondoImagen);
     animation-name: subiendoYBajando;
     animation-duration: 10s;
     animation-timing-function: linear;
@@ -227,15 +217,15 @@ li {display: flex;
     padding: 18px;
     height: auto;
     width: auto;
-    background-color: #d00000;
-    .hijo {background-color: aqua;
+    background-color: map-get($map: $colores, $key: colorDeTextoNav);
+    .hijo {background-color: map-get($map: $colores, $key: colorDelHijo);
         width: 40px;
         height: 40px;
         margin: 4px;}}
     .padreTexto {grid-area: padreTexto;
         margin: 18px;
         padding: 18px;
-        background-color: #d00;}}
+        background-color: map-get($map: $colores, $key: colorDeTextoNav);}}
             /* Main contacto.html */
 .cuerpoVisibleContacto {display: grid;
     grid-template-areas: "formulario imagen";
@@ -245,25 +235,23 @@ li {display: flex;
     padding: 18px;
     height: auto;
     width: auto;
-    background-color: #e85d04;
+    background-color: map-get($map: $colores, $key: colorDeFondoMain);
     .formulario {grid-area: formulario;
         display: flex;
        flex-direction: column;
         margin: 18px;
         border: 3px solid black;
         padding: 18px;
-        background-color: #d00000;
+        background-color: map-get($map: $colores, $key: colorDeTextoNav);
         .entrada {margin: 18px;
             text-align: center;
-            .datos {background-color: #a50505;
+            .datos {background-color: map-get($map: $colores, $key: colorDeDatos);
                 border: 1px solid red;}}}
                 .imagenesForm {grid-area: imagen;
                     margin: 18px;
                     border: 3px solid black;
                     padding: 18px;
-                    height: auto;
-                    width: auto;
-                background-color: #dc2f02;
+                background-color: map-get($map: $colores, $key: colorDeFondoImagen);
                 .imgIndexForm {width: 100%;}}}
 
      /* pie de página */
@@ -273,9 +261,7 @@ li {display: flex;
     margin: 18px;
     border: 3px solid black;
     padding: 18px;
-    height: auto;
-    width: auto;
-    background-color: $colorDeFondoFooter;
+    background-color: map-get($map: $colores, $key: colorDeFondoFooter);
     .textoPie {font-family: Verdana, Geneva, Tahoma, sans-serif;}}
     /* Media Queries */
         @media screen and (max-width: 480px){
