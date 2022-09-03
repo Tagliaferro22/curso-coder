@@ -1,6 +1,7 @@
 @import "base/mapas";
 @import "base/extend";
 @import "base/mixin";
+@import "base/variables";
 
 /* Reset */
 * {margin: 0;
@@ -9,30 +10,27 @@
 /* Color de fondo */
 .cuerpoCompleto {background-color: map-get($map: $colores, $key: colorDeFondo);}
 /* Cabecera */
-.cabecera {display: flex;
+.cabecera {display: $flex;
     justify-content: center;
     background-color: map-get($map: $colores, $key: colorDeFondoTitle);
     @include medidas (auto, auto, 1.125rem, 1.125rem);
     @extend %border;
-    .title { width: 100%;
+    .title { @include medidas (100%, 80%, 1%, auto);
     background-color: map-get($map: $colores, $key: colorDeFondoTitle);
     font-size: 3rem;
-    text-align: center;
-    height: 80%;
-    padding: 1%;
-    margin: auto;}}
-    /* imagen */
-.imagenesBlog {display: flex;
+    text-align: center;}}
+    /* imagen blog */
+.padreImagenesBlog {display: $flex;
         justify-content: center;
-        margin: 18px;
+        @include medidas (auto, auto, 1.125rem, 1.125rem);
         @extend %border;
-        width: auto;
         background-color: map-get($map: $colores, $key: colorDeFondoImagen);
         animation-name: subiendoYBajando;
         animation-duration: 10s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
-        .img-index {width: auto;}
+        .imgBlog {background-color: map-get($map: $colores, $key: colorDeFondoImagen);
+            @include medidas (50%, auto, auto, auto);}
         @keyframes subiendoYBajando {
             0% {padding: 18px;}
             25% {padding-top: 9px;
@@ -44,8 +42,8 @@
             100%{padding-top: 18px;
                 padding-bottom: 18px;}
         }}
-       /* Parte del blog */
-       /* Nav */
+/* Parte del blog 
+Nav */
    .barraDeNavegacionBlog {background-color: map-get($map: $colores, $key: colorDeFondoNav);
     @extend %border;
     border-style: ridge;
@@ -58,11 +56,9 @@
         grid-template-areas: "experiencias notando aprendizajes"
         "rimando . inicio";
         gap: 18px;
-        li {display: flex;
+        li {display: $flex;
             justify-content: center;
             align-items: center;
-            width: 100%;
-            height: 80%;
             @include medidas (100%, 80%, auto, auto);
             a {color: map-get($map: $colores, $key: colorDeTextoNav);
             font-size: 1.8rem;
@@ -86,7 +82,7 @@
                             display: grid;
                             grid-template-areas: "portafolio . inicio";
                             list-style: none;
-                    li {display: flex;
+                    li {display: $flex;
                         justify-content: center;
                         a {color: map-get($map: $colores, $key: colorDeTextoNav);
                             font-size: 2.4rem;
@@ -103,7 +99,7 @@
         display: grid;
         grid-template-areas: "inicio . contacto";
     list-style: none;
-    li {display: flex;
+    li {display: $flex;
     justify-content: center;
     a {color: map-get($map: $colores, $key: colorDeTextoNav);
         font-size: 2.4rem;
@@ -142,25 +138,29 @@
         font-weight: inherit;}
     .texto {@include medidas (auto, auto, 1.125rem, 1.125rem);
             color: map-get($map: $colores, $key: colorDeTextoBlog1);
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-    .formatoAudio {@include medidas (auto, auto, auto, 1.125rem);
-    }}
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}}
     .notandoUno {grid-area: notandoUno;}
     .notandoDos {grid-area: notandoDos;}
     .notandoTres {grid-area: notandoTres;}
     .notandoCuatro {grid-area: notandoCuatro;}
     .notandoCinco {grid-area: notandoCinco;}
-    .notandoSeis {grid-area: notandoSeis;}}} 
+    .notandoSeis {grid-area: notandoSeis;}}
+.seccion {display: grid;
+    justify-content: center;
+        .entradaBlog{color: map-get($map: $colores, $key: colorDelTiempo);
+            @include medidas (auto, auto, 1.125rem, 1.125rem);
+            background-color: map-get($map: $colores, $key: colorDeFondoNav);
+            @extend %entradaBlog;}}}
+            
 
-    /* Parte de la página principal */
-    /* Main index.html */
-    .cuerpoVisiblePrincipal {display: grid;
+
+    /* Main portafolio */
+    .cuerpoVisiblePortafolio {display: grid;
         grid-template-areas: "imagen padre";
         @include medidas (auto, auto, 1.125rem, 1.125rem);
     background-color: map-get($map: $colores, $key: colorDeFondoMain);
     @extend %border;
-    .imagenesPrincipal{grid-area: imagen;
+    .imagenesPortafolio{grid-area: imagen;
         @include medidas (auto, auto, 1.125rem, 1.125rem);
         @extend %border;
     background-color: map-get($map: $colores, $key: colorDeFondoImagen);
@@ -182,7 +182,7 @@
      background-color: map-get($map: $colores, $key: colorDeFondoMain);
     .imagenesPrincipalIndex{grid-area: imagen;
         @include medidas (auto, auto, 1.125rem, 1.125rem);
-        display: flex;
+        display: $flex;
         justify-content: center;
     background-color: map-get($map: $colores, $key: colorDeFondoImagen);
     animation-name: subiendoYBajando;
@@ -192,7 +192,7 @@
     .imgIndexPrincipal{@include medidas (100%, auto, auto, auto);}}
     .padreIndex{grid-area: padre;
         @include medidas (auto, auto, 1.125rem, 1.125rem);
-        display: flex;
+        display: $flex;
     flex-wrap: wrap;
     background-color: map-get($map: $colores, $key: colorDeTextoNav);
     .hijo {background-color: map-get($map: $colores, $key: colorDelHijo);
@@ -200,7 +200,8 @@
     .padreTexto {grid-area: padreTexto;
         @include medidas (auto, auto, 1.125rem, 1.125rem);
         background-color: map-get($map: $colores, $key: colorDeTextoNav);}}
-            /* Main contacto.html */
+
+/* Main contacto.html */
 .cuerpoVisibleContacto {display: grid;
     grid-template-areas: "formulario imagen";
     justify-content: center;
@@ -208,7 +209,7 @@
     @extend %border;
     background-color: map-get($map: $colores, $key: colorDeFondoMain);
     .formulario {grid-area: formulario;
-        display: flex;
+        display: $flex;
        flex-direction: column;
        @include medidas (auto, auto, 1.125rem, 1.125rem);
        @extend %border;
@@ -224,46 +225,138 @@
                 .imgIndexForm {@include medidas (100%, auto, auto, auto);}}}
 
      /* pie de página */
-     .pieDePagina {display: flex;
+     .pieDePagina {display: $flex;
         justify-content: center;
     align-content: flex-end;
     @include medidas (auto, auto, 1.125rem, 1.125rem);
     @extend %border;
     background-color: map-get($map: $colores, $key: colorDeFondoFooter);
-    .textoPie {font-family: Verdana, Geneva, Tahoma, sans-serif;}}
-    /* Media Queries */
-        @media screen and (max-width: 480px){
-            /* Nav */
-            .menu-list {
-              gap: 9px;
-            li {a {
+    .textoPie {font-size: 2rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;}}
+
+
+    /* Vista Mobile */
+    @media(max-width: 480px){
+/* Index */
+/* Nav */
+.barraDeNavegacion {.menuList{li{a{font-size: 1.4rem;}}}}
+/* Main */
+.cuerpoVisiblePrincipalIndex {
+    display: grid;
+    grid-template-areas: "imagen"
+                        "padre"
+                        "padreTexto";}
+
+/*Portafolio*/
+/*Nav*/
+.barraDeNavegacion {.menuListContacto{li{a{font-size: 1.4rem;}}}}
+/* Main */
+.cuerpoVisiblePrincipal{display: grid;
+grid-template-areas: "imagen"
+"padre";}
+
+/* Contacto */
+/* Main */
+.cuerpoVisibleContacto{grid-template-areas: "formulario"
+    "imagen";}
+// Index
+// Nav
+.barraDeNavegacion {
+    .menuList, .menuListContacto{
+        li{
+            a{
+                font-size: 1.4rem;
+            }
+        }
+    }}
+/* Main */
+.cuerpoVisiblePrincipalIndex {
+    display: grid;
+    grid-template-areas: "imagen"
+                        "padre"
+                        "padreTexto";
+}
+
+/*Portafolio
+ Main*/
+
+.cuerpoVisiblePrincipal{display: grid;
+grid-template-areas: "imagen"
+"padre";}
+
+// Contacto
+// Main
+.cuerpoVisibleContacto{grid-template-areas: "formulario"
+    "imagen";}
+
+/* Blog
+ Index-blog
+ Imagenes*/
+ .padreImagenesBlog{.imgBlog{.cuerpoCarta{
+    h2.subTitleCarta{font-size: 1.5rem;}
+    p.textoCarta{font-size: 1.2rem;}
+ }}}
+ /*Nav*/
+.barraDeNavegacionBlog {.menuListBlog{li{a{
+                text-align: center;
+                font-size:  0.9rem;
+                @include medidas (auto, auto, auto, 0.3rem);
+            }
+        }
+    }}
+/* Main blog */
+.cuerpoVisible{
+    .seccion, .seccionNotando{display: $flex;
+        flex-direction: column;
+        justify-content: center;
+        .entradaBlog{.subTitle{font-size: 2rem;}
+                    .texto{font-size: 1.2rem;}
+                    .tiempo{font-size: 1rem;}}
+        .entradaBlogFix{@include medidas (auto, auto, auto, 1rem);}}}
+    }
+
+
+
+ @media (max-width: 768px) and (min-width: 481px){
+/* Nav Index, blog y contacto */
+.barraDeNavegacion, .barraDeNavegacionBlog {
+    .menuList, .menuListContacto, .menuListBlog{
+        li{
+            a{
+                text-align: center;
                 font-size:  1rem;
-                @include medidas (auto, auto, auto, 0.4rem);}}} 
-
-            .seccion {@include medidas (auto, auto, 1.6875rem, auto);
-                .entrada-blog {@include medidas (auto, auto, 1.125rem, 1.125rem);}}}
-
-    // MEDIA QUERIES DE LA PAGINA PRINCIPAL
-    @media screen and (max-width: 480px){
-     
-        /* MAIN Y MENU .cuerpoVisible {grid-template-areas: "imagen"
-            "padre";}
-        li a {font-size: 1.4rem;} */
-    }
-    @media (max-width: 768px) and (min-width: 481px) {
-        
-        /* NAV = .menuList {
-            gap: 9px;}
-                li a {
-                    font-size:  1.4rem;
-                margin: 0.4rem;} 
-                ul {height: 1.875rem;}
-                li {display: flex;
-                align-items: center;} */
-    
-        /* main =
-        .cuerpoVisible {display: grid;
-            grid-template-areas: "imagen"
-            "padre"
-            "carta";} */
-    }
+                @include medidas (auto, auto, auto, 0.4rem);
+            }
+        }
+    }}
+ /* Main Index */
+ .cuerpoVisiblePrincipalIndex {
+    display: grid;
+    grid-template-areas: "imagen"
+                        "padre"
+                        "padreTexto";
+}
+/* Main Portafolio */
+.cuerpoVisiblePrincipal{display: grid;
+    grid-template-areas: "imagen"
+    "padre";}
+ /* Main Blog */
+ .cuerpoVisible{
+    .seccion, .seccionNotando{display: $flex;
+        flex-direction: column;
+        justify-content: center;
+        .entradaBlog{.subTitle{font-size: 2rem;}
+                    .texto{font-size: 1.2rem;}
+                    .tiempo{font-size: 1rem;}}
+        .entradaBlogFix{@include medidas (auto, auto, auto, 1rem);}}}
+/* Main contacto */
+.cuerpoVisibleContacto{grid-template-areas: "formulario"
+    "imagen";}
+/* Pie */
+.pieDePagina, .pieDePaginaFix {
+    display: $flex;
+    justify-content: center;
+    align-content: flex-end;
+    .textoPie, .textoPieFix{text-align: center;
+        font-size: 1.5rem;}}
+}

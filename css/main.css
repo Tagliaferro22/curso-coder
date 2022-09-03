@@ -1,6 +1,24 @@
 @charset "UTF-8";
-.cabecera, .imagenesBlog, .barraDeNavegacionBlog, .barraDeNavegacion, .cuerpoVisible, .cuerpoVisiblePrincipal, .cuerpoVisiblePrincipal .imagenesPrincipal, .cuerpoVisiblePrincipal .padre, .cuerpoVisiblePrincipalIndex, .cuerpoVisibleContacto, .cuerpoVisibleContacto .formulario, .cuerpoVisibleContacto .imagenesForm, .pieDePagina {
+.cabecera, .padreImagenesBlog, .barraDeNavegacionBlog, .barraDeNavegacion, .cuerpoVisible, .cuerpoVisiblePortafolio, .cuerpoVisiblePortafolio .imagenesPortafolio, .cuerpoVisiblePortafolio .padre, .cuerpoVisiblePrincipalIndex, .cuerpoVisibleContacto, .cuerpoVisibleContacto .formulario, .cuerpoVisibleContacto .imagenesForm, .pieDePagina {
   border: 3px solid #000; }
+
+.cuerpoVisible .seccion .entradaBlog .subTitle {
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: inherit; }
+
+.cuerpoVisible .seccion .entradaBlog .texto {
+  width: auto;
+  height: auto;
+  padding: 1.125rem;
+  margin: 1.125rem;
+  color: #002df7;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2.1rem; }
+
+.cuerpoVisible .seccion .entradaBlog .tiempo {
+  font-size: 1.8rem; }
 
 /* Reset */
 * {
@@ -14,7 +32,7 @@
 
 /* Cabecera */
 .cabecera {
-  display: flex;
+  display: display flex;
   justify-content: center;
   background-color: #faa307;
   width: auto;
@@ -23,26 +41,32 @@
   margin: 1.125rem; }
   .cabecera .title {
     width: 100%;
-    background-color: #faa307;
-    font-size: 3rem;
-    text-align: center;
     height: 80%;
     padding: 1%;
-    margin: auto; }
+    margin: auto;
+    background-color: #faa307;
+    font-size: 3rem;
+    text-align: center; }
 
-/* imagen */
-.imagenesBlog {
-  display: flex;
+/* imagen blog */
+.padreImagenesBlog {
+  display: display flex;
   justify-content: center;
-  margin: 18px;
   width: auto;
+  height: auto;
+  padding: 1.125rem;
+  margin: 1.125rem;
   background-color: #dc2f02;
   animation-name: subiendoYBajando;
   animation-duration: 10s;
   animation-timing-function: linear;
   animation-iteration-count: infinite; }
-  .imagenesBlog .img-index {
-    width: auto; }
+  .padreImagenesBlog .imgBlog {
+    background-color: #dc2f02;
+    width: 50%;
+    height: auto;
+    padding: auto;
+    margin: auto; }
 
 @keyframes subiendoYBajando {
   0% {
@@ -60,8 +84,8 @@
     padding-top: 18px;
     padding-bottom: 18px; } }
 
-/* Parte del blog */
-/* Nav */
+/* Parte del blog 
+Nav */
 .barraDeNavegacionBlog {
   background-color: #FFAA00;
   border-style: ridge;
@@ -78,11 +102,9 @@
     grid-template-areas: "experiencias notando aprendizajes" "rimando . inicio";
     gap: 18px; }
     .barraDeNavegacionBlog .menuListBlog li {
-      display: flex;
+      display: display flex;
       justify-content: center;
       align-items: center;
-      width: 100%;
-      height: 80%;
       width: 100%;
       height: 80%;
       padding: auto;
@@ -127,7 +149,7 @@
     grid-template-areas: "portafolio . inicio";
     list-style: none; }
     .barraDeNavegacion .menuListContacto li {
-      display: flex;
+      display: display flex;
       justify-content: center; }
       .barraDeNavegacion .menuListContacto li a {
         color: #d00000;
@@ -150,7 +172,7 @@
     grid-template-areas: "inicio . contacto";
     list-style: none; }
     .barraDeNavegacion .menuList li {
-      display: flex;
+      display: display flex;
       justify-content: center; }
       .barraDeNavegacion .menuList li a {
         color: #d00000;
@@ -204,11 +226,6 @@
         margin: 1.125rem;
         color: #002df7;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
-      .cuerpoVisible .seccionNotando .entradaBlog .formatoAudio {
-        width: auto;
-        height: auto;
-        padding: auto;
-        margin: 1.125rem; }
     .cuerpoVisible .seccionNotando .notandoUno {
       grid-area: notandoUno; }
     .cuerpoVisible .seccionNotando .notandoDos {
@@ -221,10 +238,19 @@
       grid-area: notandoCinco; }
     .cuerpoVisible .seccionNotando .notandoSeis {
       grid-area: notandoSeis; }
+  .cuerpoVisible .seccion {
+    display: grid;
+    justify-content: center; }
+    .cuerpoVisible .seccion .entradaBlog {
+      color: #20b439;
+      width: auto;
+      height: auto;
+      padding: 1.125rem;
+      margin: 1.125rem;
+      background-color: #FFAA00; }
 
-/* Parte de la página principal */
-/* Main index.html */
-.cuerpoVisiblePrincipal {
+/* Main portafolio */
+.cuerpoVisiblePortafolio {
   display: grid;
   grid-template-areas: "imagen padre";
   width: auto;
@@ -232,7 +258,7 @@
   padding: 1.125rem;
   margin: 1.125rem;
   background-color: #e85d04; }
-  .cuerpoVisiblePrincipal .imagenesPrincipal {
+  .cuerpoVisiblePortafolio .imagenesPortafolio {
     grid-area: imagen;
     width: auto;
     height: auto;
@@ -243,12 +269,12 @@
     animation-duration: 10s;
     animation-timing-function: linear;
     animation-iteration-count: infinite; }
-    .cuerpoVisiblePrincipal .imagenesPrincipal .imgIndexPrincipal {
+    .cuerpoVisiblePortafolio .imagenesPortafolio .imgIndexPrincipal {
       width: 100%;
       height: auto;
       padding: 1.125rem;
       margin: 1.125rem; }
-  .cuerpoVisiblePrincipal .padre {
+  .cuerpoVisiblePortafolio .padre {
     display: grid;
     grid-area: padre;
     width: auto;
@@ -271,7 +297,7 @@
     height: auto;
     padding: 1.125rem;
     margin: 1.125rem;
-    display: flex;
+    display: display flex;
     justify-content: center;
     background-color: #dc2f02;
     animation-name: subiendoYBajando;
@@ -289,7 +315,7 @@
     height: auto;
     padding: 1.125rem;
     margin: 1.125rem;
-    display: flex;
+    display: display flex;
     flex-wrap: wrap;
     background-color: #d00000; }
     .cuerpoVisiblePrincipalIndex .padreIndex .hijo {
@@ -318,7 +344,7 @@
   background-color: #e85d04; }
   .cuerpoVisibleContacto .formulario {
     grid-area: formulario;
-    display: flex;
+    display: display flex;
     flex-direction: column;
     width: auto;
     height: auto;
@@ -349,7 +375,7 @@
 
 /* pie de página */
 .pieDePagina {
-  display: flex;
+  display: display flex;
   justify-content: center;
   align-content: flex-end;
   width: auto;
@@ -358,46 +384,117 @@
   margin: 1.125rem;
   background-color: #9d0208; }
   .pieDePagina .textoPie {
+    font-size: 2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif; }
 
-/* Media Queries */
-@media screen and (max-width: 480px) {
+/* Vista Mobile */
+@media (max-width: 480px) {
+  /* Index */
   /* Nav */
-  .menu-list {
-    gap: 9px; }
-    .menu-list li a {
-      font-size: 1rem;
+  .barraDeNavegacion .menuList li a {
+    font-size: 1.4rem; }
+  /* Main */
+  .cuerpoVisiblePrincipalIndex {
+    display: grid;
+    grid-template-areas: "imagen" "padre" "padreTexto"; }
+  /*Portafolio*/
+  /*Nav*/
+  .barraDeNavegacion .menuListContacto li a {
+    font-size: 1.4rem; }
+  /* Main */
+  .cuerpoVisiblePrincipal {
+    display: grid;
+    grid-template-areas: "imagen" "padre"; }
+  /* Contacto */
+  /* Main */
+  .cuerpoVisibleContacto {
+    grid-template-areas: "formulario" "imagen"; }
+  .barraDeNavegacion .menuList li a, .barraDeNavegacion .menuListContacto li a {
+    font-size: 1.4rem; }
+  /* Main */
+  .cuerpoVisiblePrincipalIndex {
+    display: grid;
+    grid-template-areas: "imagen" "padre" "padreTexto"; }
+  /*Portafolio
+ Main*/
+  .cuerpoVisiblePrincipal {
+    display: grid;
+    grid-template-areas: "imagen" "padre"; }
+  .cuerpoVisibleContacto {
+    grid-template-areas: "formulario" "imagen"; }
+  /* Blog
+ Index-blog
+ Imagenes*/
+  .padreImagenesBlog .imgBlog .cuerpoCarta h2.subTitleCarta {
+    font-size: 1.5rem; }
+  .padreImagenesBlog .imgBlog .cuerpoCarta p.textoCarta {
+    font-size: 1.2rem; }
+  /*Nav*/
+  .barraDeNavegacionBlog .menuListBlog li a {
+    text-align: center;
+    font-size: 0.9rem;
+    width: auto;
+    height: auto;
+    padding: auto;
+    margin: 0.3rem; }
+  /* Main blog */
+  .cuerpoVisible .seccion, .cuerpoVisible .seccionNotando {
+    display: display flex;
+    flex-direction: column;
+    justify-content: center; }
+    .cuerpoVisible .seccion .entradaBlog .subTitle, .cuerpoVisible .seccionNotando .entradaBlog .subTitle {
+      font-size: 2rem; }
+    .cuerpoVisible .seccion .entradaBlog .texto, .cuerpoVisible .seccionNotando .entradaBlog .texto {
+      font-size: 1.2rem; }
+    .cuerpoVisible .seccion .entradaBlog .tiempo, .cuerpoVisible .seccionNotando .entradaBlog .tiempo {
+      font-size: 1rem; }
+    .cuerpoVisible .seccion .entradaBlogFix, .cuerpoVisible .seccionNotando .entradaBlogFix {
       width: auto;
       height: auto;
       padding: auto;
-      margin: 0.4rem; }
-  .seccion {
-    width: auto;
-    height: auto;
-    padding: 1.6875rem;
-    margin: auto; }
-    .seccion .entrada-blog {
-      width: auto;
-      height: auto;
-      padding: 1.125rem;
-      margin: 1.125rem; } }
-
-@media screen and (max-width: 480px) {
-  /* MAIN Y MENU .cuerpoVisible {grid-template-areas: "imagen"
-            "padre";}
-        li a {font-size: 1.4rem;} */ }
+      margin: 1rem; } }
 
 @media (max-width: 768px) and (min-width: 481px) {
-  /* NAV = .menuList {
-            gap: 9px;}
-                li a {
-                    font-size:  1.4rem;
-                margin: 0.4rem;} 
-                ul {height: 1.875rem;}
-                li {display: flex;
-                align-items: center;} */
-  /* main =
-        .cuerpoVisible {display: grid;
-            grid-template-areas: "imagen"
-            "padre"
-            "carta";} */ }
+  /* Nav Index, blog y contacto */
+  .barraDeNavegacion .menuList li a, .barraDeNavegacion .menuListContacto li a, .barraDeNavegacion .menuListBlog li a, .barraDeNavegacionBlog .menuList li a, .barraDeNavegacionBlog .menuListContacto li a, .barraDeNavegacionBlog .menuListBlog li a {
+    text-align: center;
+    font-size: 1rem;
+    width: auto;
+    height: auto;
+    padding: auto;
+    margin: 0.4rem; }
+  /* Main Index */
+  .cuerpoVisiblePrincipalIndex {
+    display: grid;
+    grid-template-areas: "imagen" "padre" "padreTexto"; }
+  /* Main Portafolio */
+  .cuerpoVisiblePrincipal {
+    display: grid;
+    grid-template-areas: "imagen" "padre"; }
+  /* Main Blog */
+  .cuerpoVisible .seccion, .cuerpoVisible .seccionNotando {
+    display: display flex;
+    flex-direction: column;
+    justify-content: center; }
+    .cuerpoVisible .seccion .entradaBlog .subTitle, .cuerpoVisible .seccionNotando .entradaBlog .subTitle {
+      font-size: 2rem; }
+    .cuerpoVisible .seccion .entradaBlog .texto, .cuerpoVisible .seccionNotando .entradaBlog .texto {
+      font-size: 1.2rem; }
+    .cuerpoVisible .seccion .entradaBlog .tiempo, .cuerpoVisible .seccionNotando .entradaBlog .tiempo {
+      font-size: 1rem; }
+    .cuerpoVisible .seccion .entradaBlogFix, .cuerpoVisible .seccionNotando .entradaBlogFix {
+      width: auto;
+      height: auto;
+      padding: auto;
+      margin: 1rem; }
+  /* Main contacto */
+  .cuerpoVisibleContacto {
+    grid-template-areas: "formulario" "imagen"; }
+  /* Pie */
+  .pieDePagina, .pieDePaginaFix {
+    display: display flex;
+    justify-content: center;
+    align-content: flex-end; }
+    .pieDePagina .textoPie, .pieDePagina .textoPieFix, .pieDePaginaFix .textoPie, .pieDePaginaFix .textoPieFix {
+      text-align: center;
+      font-size: 1.5rem; } }

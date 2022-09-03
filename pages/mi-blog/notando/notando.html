@@ -7,22 +7,40 @@
             <meta name="author" content="Mateo Tagliaferro">
             <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
             <title>~ Mi Blog ~ Notando ~</title>
+            <!-- CSS only -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
             <link rel="stylesheet" href="../../../css/main.css">
     </head>
     <body class="cuerpoCompleto">
-        <header class="cabecera border">
+        <header class="cabecera">
             <h1 class="title">Notando</h1>
         </header>
-        <div class="imagenesBlog border">
-            <img src="/assets/img/lapiz.png" alt="Imagen de un lápiz" width="200px" class="img-index">
+        <div class="padreImagenesBlog">
+            <div class="card imgBlog">
+                <img src="../../../assets/img/lapiz.png" class="card-img-top" alt="Imagen de un lapiz">
+                <div class="card-body cuerpoCarta">
+                  <h2 class="card-title subTitleCarta">Acerca de notando</h2>
+                  <p class="card-text textoCarta">Notando es la parte de mi blog que aprovecho para hacer escribir acerca de lo que voy viviendo, es mi diario, mi dia a dia</p>
+                </div>
+              </div>
         </div>
         <nav class="barraDeNavegacionBlog border">
             <ul class="menuListBlog">
-                <li class="experiencias"><a href="../experiencias/experiencias.html">Experiencias</a></li>
-                <li class="aprendizajes"><a href="../aprendizajes-y-reflexiones/aprendizajes-y-reflexiones.html" title="Leer mis aprendizajes y/o reflexiones" class="links"> Aprendizajes / Reflexiones</a></li>
-                <li class="podcast"><a href="../podcast/podcast.html" class="links">Podcast</a></li>
-                <li class="rimando"><a href="../rimando/rimando.html" class="links">Rimando</a></li>
-                <li class="index-blog"><a href="../index-blog/index-blog.html" title="Volver al inicio del blog" class="links">Inicio </a></li>
+                <li class="experiencias">
+                    <a href="../experiencias/experiencias.html">Experiencias</a>
+                </li>
+                <li class="aprendizajes">
+                    <a href="../aprendizajes-y-reflexiones/aprendizajes-y-reflexiones.html" title="Leer mis aprendizajes y/o reflexiones"> Aprendizajes / Reflexiones</a>
+                </li>
+                <li class="podcast">
+                    <a href="../podcast/podcast.html">Podcast</a>
+                </li>
+                <li class="rimando">
+                    <a href="../rimando/rimando.html">Rimando</a>
+                </li>
+                <li class="index-blog">
+                    <a href="../index-blog/index-blog.html" title="Volver al inicio del blog">Inicio blog</a>
+                </li>
             </ul>
         </nav>
         <main class="cuerpoVisible border">
@@ -41,7 +59,7 @@
                         <time datetime="" class="tiempo">Escrito el 16 de julio</time>
                             <p class="texto">No se dan una idea de lo que me costó poner la página de esta manera. Recién acabo de hacer una captura de pantalla y me pareció una de las cosas más satisfactorias que hice en la semana.
                             Lo que hice hoy fue estructurar mejor y darle un borde redondeado a la barra de navegación y a las entradas del blog. <br>
-                            Lo bueno de estar haciendo esto por mí cuenta, es que me sirve al ser práctico, ya que pongo a prueba mis conocimientos, y también me ayuda a desarrollar mi capacidad de resolver problemas. Hay que decirlo, está buenísimo el curso que estoy viendo, es super completo, pero si yo no pongo a prueba lo que aprendo con algo práctico, ese mismo conocimiento tan útil y esencial desaparece de mí cabeza. Esa es la <a href="../aprendizajes-y-reflexiones/aprendizajes-y-reflexiones.html#entrada-4" class="links">reflexión de hoy</a>
+                            Lo bueno de estar haciendo esto por mí cuenta, es que me sirve al ser práctico, ya que pongo a prueba mis conocimientos, y también me ayuda a desarrollar mi capacidad de resolver problemas. Hay que decirlo, está buenísimo el curso que estoy viendo, es super completo, pero si yo no pongo a prueba lo que aprendo con algo práctico, ese mismo conocimiento tan útil y esencial desaparece de mí cabeza. Esa es la <a href="../aprendizajes-y-reflexiones/aprendizajes-y-reflexiones.html#entrada-4">reflexión de hoy</a>
                             </p>
                                 <footer></footer>
                 </article>
@@ -50,7 +68,7 @@
                         <time datetime="" class="tiempo">Escrito el 12 de julio</time>
                             <p class="texto">Acá estoy nuevamente escribiendo otra entrada para el blog. Jajaja quizás sonó cómo que estoy harto de hacerlo, pero verdaderamente es algo que me gusta. Me gustaría ya ya ya llegar a la parte de diseñi UI/UX para que mí página se vea lo más profesional posible, pero para eso falta. <br>
                             No sé cuanto me falte, de hecho, es curioso, porque creía que para esta semana o para la próxima a más tardar ya iba a entender cómo funciona CSS, la pregunta es; ¿me sigo teniendo tanta fé? Y la respuesta es un certero: SI.
-                            De hecho, me gusta, porque ya estoy entendiendo muchísimo mejor la lógica detrás de CSS, lo mismo que me paso hace algunos días con HTML; se siente muy bien, de hecho ese es <a href="../aprendizajes-y-reflexiones/aprendizajes-y-reflexiones.html#entrada-3" class="links">el primer resultado.</a> <br>
+                            De hecho, me gusta, porque ya estoy entendiendo muchísimo mejor la lógica detrás de CSS, lo mismo que me paso hace algunos días con HTML; se siente muy bien, de hecho ese es <a href="../aprendizajes-y-reflexiones/aprendizajes-y-reflexiones.html#entrada-3">el primer resultado.</a> <br>
                             </p>
                                 <footer></footer>
                 </article>
@@ -58,7 +76,7 @@
                     <h2 class="subTitle">Notando 3</h2>
                         <time datetime="" class="tiempo">Escrito el 11 de julio</time>
                             <p class="texto">Bueno acá estoy nuevamente aprendiendo de desarrollo web, lo que voy a hacer el día de hoy es colocar las entradas más nuevas en la página principal del blog <br>
-                            Esto lo hago para que, cuando alguien acceda a <a href="../index-blog.html" class="links">la página principal del blog</a>, pueda ver lo último que he escrito independientemente si se trata de Notando, de Reflexiones, o de Experiencias. Lo que quiero que suceda es que pueda leer lo último que escribí, y si le da click, lo mande al artiulo especifico de la página específica.</p>
+                            Esto lo hago para que, cuando alguien acceda a <a href="../index-blog.html">la página principal del blog</a>, pueda ver lo último que he escrito independientemente si se trata de Notando, de Reflexiones, o de Experiencias. Lo que quiero que suceda es que pueda leer lo último que escribí, y si le da click, lo mande al artiulo especifico de la página específica.</p>
                                 <footer></footer>
                 </article>
                 <article class="entradaBlog notandoDos">
@@ -67,9 +85,9 @@
                             <p class="texto">Bueno, aquí estoy nuevamente escribiendo, y si no lo hice antes de forma digital, en mí propio blog, fue porque lo estaba haciendo en formato físico. <br>
                             Me sucedieron varias cosas, e/ las más relevantes, que el martes fué el último día que hice natación, el miércoles falleció mí gata, ayer fuí al taller y bueno, estuve muy cerca de llorar, de hecho, no sé porque no lo hice, simplemente no me surgió el llanto. Si que tuve bastantes ganas de hacerlo, y de hecho en cierto momento sentí que estaba por vomitar, pero más allá de eso no lloré. <br>
                             De todas maneras, ir ayer al taller si que me sirvió bastante para soltar la angustia que estaba sintiendo por la muerte de mí gata, y la verdad ahora me siento mucho más libre habiendo podido expresar lo que sentía sin sentirme juzgado por parte de nadie. <br> La verdad que disfruto muchísimo estar aprendiendo programación, es un tema que me empezó a obsesionar, tanto así al punto de que me descargué varios libros en formato pdf que voy a estar leyendo porque también me interesan. De hecho, una vez había escuchado en un vídeo de Pablo Zamit que la mejor forma de aprender un tema nuevo es viendo vídeos, escuchando gente hablando al respecto y leyendo libros del tema. Me sienta bien el hecho de poder expresar que con cada acción que tomo me siento congruente. Hace algunos meses siento que encontré el camino que quiero transitar en esta vida, quiero decir, mí propósito. Y el hecho de haberlo encontrado, quizás no lo celebre cómo me hubiese gustado (con una gran fiesta bien californiana jajajajasj), pero siento que ya va haber tiempo para eso, para la celebración externa. En estos momentos, de hecho, estoy con una sonrisa en mí rostro, y siento que en parte estoy celebrando el haber encontrado mí propósito. <br>
-                            También algo que me hace sentir muy bien, de lo cuál escribí una reflexión en <a href="../aprendizajes-y-reflexiones/aprendizajes-y-reflexiones.html" class="links">Aprendizajes y reflexiones</a> es el hecho de <a href="../aprendizajes-y-reflexiones/aprendizajes-y-reflexiones.html#congruencia" class="links">ser congruente</a> <br>
-                            Hoy estuve leyendo un libro que empecé ayer, se llama <cite class="citando">El gran libro de HTML5, CSS3 y JavaScript</cite>. Está bastante bueno, llegué hasta la página 55 hoy, en dónde comienza a hablar de CSS. Vengo bastante bien con el desarrollo web, de hecho, ya entiendo bastante bien cómo funciona la estructura de HTML, ahora estoy aprendiendo CSS lo cuál sería el diseño de la página web. Después de entender cómo funciona CSS (lo cuál siendo optimista entenderé la próxima semana o la siguiente cómo algo muy exagerado, ya que le vengo dedicando bastante intensidad durante mí día a día), lo que voy a hacer es dedicarme a aprender JavaScript. <br>
-                            Estoy poniendo expectativas positivas en mí mismo, y de hecho es algo que me gusta, ya que estoy trabajando por mí cuenta, por mí propia voluntad, y me encanta. Lo hago porque verdaderamente lo disfruto, y cuando no tengo ganas, me <a href="../aprendizajes-y-reflexiones/aprendizajes-y-reflexiones.html#mentalidad-1" class="links">mentalizo para disfrutar.</a>
+                            También algo que me hace sentir muy bien, de lo cuál escribí una reflexión en <a href="../aprendizajes-y-reflexiones/aprendizajes-y-reflexiones.html">Aprendizajes y reflexiones</a> es el hecho de <a href="../aprendizajes-y-reflexiones/aprendizajes-y-reflexiones.html#congruencia">ser congruente</a> <br>
+                            Hoy estuve leyendo un libro que empecé ayer, se llama <cite>El gran libro de HTML5, CSS3 y JavaScript</cite>. Está bastante bueno, llegué hasta la página 55 hoy, en dónde comienza a hablar de CSS. Vengo bastante bien con el desarrollo web, de hecho, ya entiendo bastante bien cómo funciona la estructura de HTML, ahora estoy aprendiendo CSS lo cuál sería el diseño de la página web. Después de entender cómo funciona CSS (lo cuál siendo optimista entenderé la próxima semana o la siguiente cómo algo muy exagerado, ya que le vengo dedicando bastante intensidad durante mí día a día), lo que voy a hacer es dedicarme a aprender JavaScript. <br>
+                            Estoy poniendo expectativas positivas en mí mismo, y de hecho es algo que me gusta, ya que estoy trabajando por mí cuenta, por mí propia voluntad, y me encanta. Lo hago porque verdaderamente lo disfruto, y cuando no tengo ganas, me <a href="../aprendizajes-y-reflexiones/aprendizajes-y-reflexiones.html#mentalidad-1">mentalizo para disfrutar.</a>
                             </p>
                                 <footer></footer>
                 </article>

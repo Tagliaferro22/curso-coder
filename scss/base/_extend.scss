@@ -1,1 +1,14 @@
-%border {border: 3px solid #000}
+@import "mixin";
+// Importé el mixin para que me funcione el extend de %entradaBlog
+
+%border {border: 3px solid #000;}
+%entradaBlog {.subTitle {text-align: center;
+    font-size: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: inherit;}
+    .texto {@include medidas (auto, auto, 1.125rem, 1.125rem);
+        color: map-get($map: $colores, $key: colorDeTextoBlog1);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.1rem;}
+    .tiempo{font-size: 1.8rem;}}
+

@@ -8,4 +8,20 @@ Agregué las etiquetas <meta> description a mis html (descripcion de cada html, 
 //
 "    "  " "  "      " <meta> keywords   "" ""   "" (palabras clave de cada html)
 //
-Agregué el texto descriptivo a las imagenes de mi sitio
+Hice mi proyecto responsive en mobile, tablet y desktop
+//
+Todo mi sitio estructurado con código SASS 
+//
+Revision de las etiquetas, links, estructura, texto descriptivo de las imagenes y clases(las clases que tienen otro formato que no es camelCase, es por boostrap) de mi sitio (todos los html)
+//
+Subi mi entrega a netlify*
+//
+Saque todo el código comentado
+//
+Agregué un componente de Boostrap a cada HTML de mi sitio, lo que hice fue transformar las imagenes que tenia en las cards de boostrap, en las cuales les inclui la descripcion de la pagina web 
+//
+En mi archivo SCSS inclui nesting, variables (todos los display flex), mixin, extend, archivos import
+//
+Comparti los links de mi proyecto de netlify* y de github*
+//
+Ordene mi código de SASS de una forma entendible con comentarios*
