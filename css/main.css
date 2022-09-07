@@ -389,20 +389,20 @@ Nav */
 
 /* Vista Mobile */
 @media (max-width: 480px) {
-  /* Index */
-  /* Nav */
+  /* Index 
+ Nav */
   .barraDeNavegacion .menuList li a {
     font-size: 1.4rem; }
   /* Main */
-  .cuerpoVisiblePrincipalIndex {
+  .cuerpoVisibleIndex {
     display: grid;
     grid-template-areas: "imagen" "padre" "padreTexto"; }
-  /*Portafolio*/
-  /*Nav*/
+  /*Portafolio
+Nav*/
   .barraDeNavegacion .menuListContacto li a {
     font-size: 1.4rem; }
   /* Main */
-  .cuerpoVisiblePrincipal {
+  .cuerpoVisiblePortafolio {
     display: grid;
     grid-template-areas: "imagen" "padre"; }
   /* Contacto */
