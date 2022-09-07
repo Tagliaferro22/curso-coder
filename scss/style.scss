@@ -3,13 +3,13 @@
 @import "base/mixin";
 @import "base/variables";
 
-/* Reset */
+/* Reset general*/
 * {margin: 0;
     padding: 0;
     box-sizing: border-box;}
-/* Color de fondo */
+/* Color de fondo general*/
 .cuerpoCompleto {background-color: map-get($map: $colores, $key: colorDeFondo);}
-/* Cabecera */
+/* Cabecera  general*/
 .cabecera {display: $flex;
     justify-content: center;
     background-color: map-get($map: $colores, $key: colorDeFondoTitle);
@@ -19,6 +19,72 @@
     background-color: map-get($map: $colores, $key: colorDeFondoTitle);
     font-size: 3rem;
     text-align: center;}}
+/* Pagina Principal
+Nav */
+.barraDeNavegacion {@include barraDeNavegacion;
+    @extend %border;
+    .menuListContacto {grid-area: menu;
+                            display: grid;
+                            grid-template-areas: "portafolio . inicio";
+                            list-style: none;
+                    li {display: $flex;
+                        justify-content: center;
+                        a {color: map-get($map: $colores, $key: colorDeTextoNav);
+                            font-size: 2.4rem;
+                            text-decoration: none;
+                            margin: 1rem;}
+                        a:hover {transform: scale(1.2);
+                                    background-color: map-get($map: $colores, $key: colorDeTransformacion);
+                                    box-shadow: 4px 4px 10px black;
+                                    transition: 1.2s;
+                                    border-radius: 10px;}}
+        .portafolio {grid-area: portafolio;}
+        .inicio {grid-area: inicio;}}
+    .menuList {grid-area: menu;
+        display: grid;
+        grid-template-areas: "inicio . contacto";
+    list-style: none;
+    li {display: $flex;
+    justify-content: center;
+    a {color: map-get($map: $colores, $key: colorDeTextoNav);
+        font-size: 2.4rem;
+        text-decoration: none;
+        @include medidas (auto, auto, auto, 1rem);}
+    a:hover {transform: scale(1.2);
+        background-color: #f48c22;
+    box-shadow: 4px 4px 10px black;
+    transition: 1.2s;
+    border-radius: 10px;}}
+    .contacto {grid-area: contacto;}
+    .inicio {grid-area: inicio;}}}
+
+/* Main Index */
+.cuerpoVisibleIndex {display: grid;
+    grid-template-areas: "imagen padre padreTexto";
+    @include medidas (auto, 100%, 1.125rem, 1.125rem);
+    @extend %border;
+ background-color: map-get($map: $colores, $key: colorDeFondoMain);
+.imagenesIndex{grid-area: imagen;
+    @include medidas (auto, auto, 1.125rem, 1.125rem);
+    display: $flex;
+    justify-content: center;
+background-color: map-get($map: $colores, $key: colorDeFondoImagen);
+animation-name: subiendoYBajando;
+animation-duration: 10s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+.imgIndex{@include medidas (100%, auto, auto, auto);}}
+.padreIndex{grid-area: padre;
+    @include medidas (auto, auto, 1.125rem, 1.125rem);
+    display: $flex;
+flex-wrap: wrap;
+background-color: map-get($map: $colores, $key: colorDeTextoNav);
+.hijo {background-color: map-get($map: $colores, $key: colorDelHijo);
+    @include medidas (45px, 45px, auto, 4px);}}
+.padreTexto {grid-area: padreTexto;
+    @include medidas (auto, auto, 1.125rem, 1.125rem);
+    background-color: map-get($map: $colores, $key: colorDeTextoNav);}}
+
     /* imagen blog */
 .padreImagenesBlog {display: $flex;
         justify-content: center;
@@ -74,46 +140,6 @@ Nav */
         li.aprendizajes {grid-area: aprendizajes;}
         li.rimando {grid-area: rimando;}
         li.inicio {grid-area: inicio;}}}
-/* Parte del sitio principal */
-/* nav */
-.barraDeNavegacion {@include barraDeNavegacion;
-    @extend %border;
-    .menuListContacto {grid-area: menu;
-                            display: grid;
-                            grid-template-areas: "portafolio . inicio";
-                            list-style: none;
-                    li {display: $flex;
-                        justify-content: center;
-                        a {color: map-get($map: $colores, $key: colorDeTextoNav);
-                            font-size: 2.4rem;
-                            text-decoration: none;
-                            margin: 1rem;}
-                        a:hover {transform: scale(1.2);
-                                    background-color: map-get($map: $colores, $key: colorDeTransformacion);
-                                    box-shadow: 4px 4px 10px black;
-                                    transition: 1.2s;
-                                    border-radius: 10px;}}
-        .portafolio {grid-area: portafolio;}
-        .inicio {grid-area: inicio;}}
-    .menuList {grid-area: menu;
-        display: grid;
-        grid-template-areas: "inicio . contacto";
-    list-style: none;
-    li {display: $flex;
-    justify-content: center;
-    a {color: map-get($map: $colores, $key: colorDeTextoNav);
-        font-size: 2.4rem;
-        text-decoration: none;
-        @include medidas (auto, auto, auto, 1rem);}
-    a:hover {transform: scale(1.2);
-        background-color: #f48c22;
-    box-shadow: 4px 4px 10px black;
-    transition: 1.2s;
-    border-radius: 10px;}}
-    .contacto {grid-area: contacto;}
-    .inicio {grid-area: inicio;}}}
-
-        /* Parte del blog */
           /* Main */
           .cuerpoVisible {
             @include medidas (auto, 100%, 1.6875rem, 1.125rem);
@@ -175,31 +201,8 @@ Nav */
         @include medidas (auto, auto, 1.125rem, 1.125rem);
         @extend %border;
         background-color: map-get($map: $colores, $key: colorDeTextoNav);}}
-    .cuerpoVisiblePrincipalIndex {display: grid;
-        grid-template-areas: "imagen padre padreTexto";
-        @include medidas (auto, 100%, 1.125rem, 1.125rem);
-        @extend %border;
-     background-color: map-get($map: $colores, $key: colorDeFondoMain);
-    .imagenesPrincipalIndex{grid-area: imagen;
-        @include medidas (auto, auto, 1.125rem, 1.125rem);
-        display: $flex;
-        justify-content: center;
-    background-color: map-get($map: $colores, $key: colorDeFondoImagen);
-    animation-name: subiendoYBajando;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    .imgIndexPrincipal{@include medidas (100%, auto, auto, auto);}}
-    .padreIndex{grid-area: padre;
-        @include medidas (auto, auto, 1.125rem, 1.125rem);
-        display: $flex;
-    flex-wrap: wrap;
-    background-color: map-get($map: $colores, $key: colorDeTextoNav);
-    .hijo {background-color: map-get($map: $colores, $key: colorDelHijo);
-        @include medidas (40px, 40px, auto, 4px);}}
-    .padreTexto {grid-area: padreTexto;
-        @include medidas (auto, auto, 1.125rem, 1.125rem);
-        background-color: map-get($map: $colores, $key: colorDeTextoNav);}}
+    
+
 
 /* Main contacto.html */
 .cuerpoVisibleContacto {display: grid;
