@@ -73,18 +73,35 @@ animation-name: subiendoYBajando;
 animation-duration: 10s;
 animation-timing-function: linear;
 animation-iteration-count: infinite;
-.imgIndex{@include medidas (100%, auto, auto, auto);}}
+.imgIndex{@include medidas (100%, auto, auto, auto);
+.cuerpoCarta{.subTitleCarta{font-size: 2.1rem;}
+            .textoCarta{font-size: 1.5rem;}}}}
 .padreIndex{grid-area: padre;
     @include medidas (auto, auto, 1.125rem, 1.125rem);
     display: $flex;
 flex-wrap: wrap;
-background-color: map-get($map: $colores, $key: colorDeTextoNav);
-.hijo {background-color: map-get($map: $colores, $key: colorDelHijo);
+background-color: map-get($map: $colores, $key: colorDeEntradaBlog);
+.textoPadreIndex{font-size: 2.1rem;}
+.hijo {background-color: black;
+    color: #fff;
     @include medidas (45px, 45px, auto, 4px);}}
 .padreTexto {grid-area: padreTexto;
+    
     @include medidas (auto, auto, 1.125rem, 1.125rem);
-    background-color: map-get($map: $colores, $key: colorDeTextoNav);}}
-
+    background-color: map-get($map: $colores, $key: colorDeEntradaBlog);
+    .subTitle{text-align: center;
+        font-size: 2.1rem;}
+    .texto{font-size: 1.5rem}}}
+/*Logo*/
+.padreLogo{
+    @include medidas (auto, auto, 1.125rem, 1.125rem);
+    display: $flex;
+    justify-content: center;
+    position: fixed;
+    left: auto;
+    right: 0;
+    bottom: 0;
+   }
     /* imagen blog */
 .padreImagenesBlog {display: $flex;
         justify-content: center;
@@ -96,7 +113,10 @@ background-color: map-get($map: $colores, $key: colorDeTextoNav);
         animation-timing-function: linear;
         animation-iteration-count: infinite;
         .imgBlog {background-color: map-get($map: $colores, $key: colorDeFondoImagen);
-            @include medidas (50%, auto, auto, auto);}
+            @include medidas (50%, auto, auto, auto);
+        .cuerpoCarta{.subTitleCarta{text-align: center;
+        font-size: 2.1rem;}
+        .textoCarta{font-size: 1.5rem;}}}
         @keyframes subiendoYBajando {
             0% {padding: 18px;}
             25% {padding-top: 9px;
@@ -156,13 +176,14 @@ Nav */
     /* Entradas del blog */
 .entradaBlog {display: grid;
     color: map-get($map: $colores, $key: colorDelTiempo);
-    @include medidas (auto, auto, 1.125rem, 1.125rem);
+    @include medidas (auto, auto, 0.3rem, 0.5rem);
     background-color: map-get($map: $colores, $key: colorDeFondoNav);
     .subTitle {text-align: center;
-        font-size: 27px;
+        font-size: 2.1rem;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-weight: inherit;}
-    .texto {@include medidas (auto, auto, 1.125rem, 1.125rem);
+    .texto {@include medidas (auto, auto, 0.5rem, 0.5rem);
+        font-size: 1.5rem;
             color: map-get($map: $colores, $key: colorDeTextoBlog1);
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}}
     .notandoUno {grid-area: notandoUno;}
@@ -194,13 +215,19 @@ Nav */
     animation-duration: 10s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    .imgIndexPrincipal{@include medidas (100%, auto, 1.125rem, 1.125rem);
+    .imgIndexPrincipal{@include medidas (auto, auto, 1.125rem, 1.125rem);
+        .cuerpoCarta{
+            .subTitleCarta{font-size: 2.1rem;}
+            .textoCarta{font-size: 1.5rem;}
+        }
     }}
-    .padre{display: grid;
+    .padrePortafolio{display: grid;
         grid-area: padre;
         @include medidas (auto, auto, 1.125rem, 1.125rem);
         @extend %border;
-        background-color: map-get($map: $colores, $key: colorDeTextoNav);}}
+    .subtitle{text-align: center;
+        font-size: 2.1rem;}
+    .texto{font-size: 2.1rem;}}}
     
 
 
@@ -216,7 +243,6 @@ Nav */
        flex-direction: column;
        @include medidas (auto, auto, 1.125rem, 1.125rem);
        @extend %border;
-        background-color: map-get($map: $colores, $key: colorDeTextoNav);
         .entrada {@include medidas (auto, auto, auto, 1.125rem);
             text-align: center;
             .datos {background-color: map-get($map: $colores, $key: colorDeDatos);
@@ -225,16 +251,21 @@ Nav */
                     @include medidas (auto, auto, 1.125rem, 1.125rem);
                     @extend %border;
                 background-color: map-get($map: $colores, $key: colorDeFondoImagen);
-                .imgIndexForm {@include medidas (100%, auto, auto, auto);}}}
+                .imgIndexForm {@include medidas (100%, auto, auto, auto);
+                .cuerpoCarta{.subTitleCarta{font-size: 2.1rem;}
+                            .textoCarta{font-size: 1.5rem;}}}}}
 
      /* pie de página */
      .pieDePagina {display: $flex;
+        text-align: center;
         justify-content: center;
     align-content: flex-end;
     @include medidas (auto, auto, 1.125rem, 1.125rem);
     @extend %border;
     background-color: map-get($map: $colores, $key: colorDeFondoFooter);
     .textoPie {font-size: 2rem;
+        color: black;
+        text-align: center;
         font-family: Verdana, Geneva, Tahoma, sans-serif;}}
 
 
@@ -312,54 +343,89 @@ grid-template-areas: "imagen"
     .seccion, .seccionNotando{display: $flex;
         flex-direction: column;
         justify-content: center;
-        .entradaBlog{.subTitle{font-size: 2rem;}
-                    .texto{font-size: 1.2rem;}
+        .entradaBlog{.subTitle{font-size: 2.1rem;}
+                    .texto{font-size: 1.5rem;}
                     .tiempo{font-size: 1rem;}}
         .entradaBlogFix{@include medidas (auto, auto, auto, 1rem);}}}
     }
 
 
 
- @media (max-width: 768px) and (min-width: 481px){
-/* Nav Index, blog y contacto */
-.barraDeNavegacion, .barraDeNavegacionBlog {
-    .menuList, .menuListContacto, .menuListBlog{
+ @media (max-width: 856px) and (min-width: 481px){
+/* Cabecera general */
+.cabecera {.title{font-size: 3.6rem;}}
+/* Nav blog*/
+.barraDeNavegacionBlog {
+.menuListBlog{
         li{
             a{
                 text-align: center;
-                font-size:  1rem;
+                font-size:  1.4rem;
                 @include medidas (auto, auto, auto, 0.4rem);
             }
         }
     }}
+/* Nav blog (p/ el error) */
+.barraDeNavegacionBlogFix{.menuListBlog{li{a{font-size: 1.6rem;}}}}
+/* Nav Index y contacto */
+.barraDeNavegacion{.menuList, .menuListContacto{display: flex;
+                                              flex-wrap: wrap;
+                                              justify-content: center;
+                                                li
+                                                {display: flex;
+                                                flex-wrap: wrap;
+                                                    a{font-size: 2.4rem;}}}}
  /* Main Index */
- .cuerpoVisiblePrincipalIndex {
+ .cuerpoVisibleIndex{
     display: grid;
     grid-template-areas: "imagen"
                         "padre"
                         "padreTexto";
+    .imagenesIndex{.imgIndex{.cuerpoCarta{.subTitleCarta{font-size: 3rem;}
+                                        .textoCarta{font-size: 2.4rem;}}}}
+    .padreIndex{.textoPadreIndex{font-size: 3rem;}
+                .hijo{width: 105px;
+                    height: 105px;
+                font-size: 2.4rem;}}  
+    .padreTexto{.subTitle{font-size: 3rem;}
+                .texto{font-size: 2.4rem;}}
 }
 /* Main Portafolio */
-.cuerpoVisiblePrincipal{display: grid;
+.cuerpoVisiblePortafolio{display: grid;
     grid-template-areas: "imagen"
-    "padre";}
+    "padre";
+    .imagenesPortafolio{.imgIndexPrincipal{.cuerpoCarta{.subTitleCarta{font-size: 3rem;}
+    .textoCarta{font-size: 2.4rem;}}}}
+    .padrePortafolio{.subTitle{font-size: 3rem;}
+    .texto{font-size: 2.4rem;}}
+}
+/* Imagen blog */
+.padreImagenesBlog {.imgBlog{
+    @include medidas (100%, auto, auto, auto);
+    .cuerpoCarta{.subTitleCarta{font-size: 3rem;}
+                        .textoCarta{font-size: 2.4rem;}}}}
  /* Main Blog */
  .cuerpoVisible{
-    .seccion, .seccionNotando{display: $flex;
+    .seccion, .seccionNotando{display: flex;
         flex-direction: column;
         justify-content: center;
-        .entradaBlog{.subTitle{font-size: 2rem;}
-                    .texto{font-size: 1.2rem;}
-                    .tiempo{font-size: 1rem;}}
-        .entradaBlogFix{@include medidas (auto, auto, auto, 1rem);}}}
+        .entradaBlog{.subTitle{font-size: 3rem;}
+                    .texto{font-size: 2.4rem;}
+                    .tiempo{font-size: 1.5rem;}}
+        .entradaBlogFix{@include medidas (auto, auto, auto, 2rem);}}}
 /* Main contacto */
 .cuerpoVisibleContacto{grid-template-areas: "formulario"
-    "imagen";}
+    "imagen";
+.formulario{.entrada{.label{font-size:2.4rem;}
+                    .datosUno{height: 2.4rem;}
+                    .datosDos{width: 70%;}}}
+.imagenesForm, .imagenesPortafolio{.imgIndexForm, .imgIndexPrincipal{.cuerpoCarta{.subTitleCarta{font-size: 3rem;}
+                                        .textoCarta{font-size: 2.4rem;}}}}}
 /* Pie */
 .pieDePagina, .pieDePaginaFix {
     display: $flex;
     justify-content: center;
     align-content: flex-end;
     .textoPie, .textoPieFix{text-align: center;
-        font-size: 1.5rem;}}
+        font-size: 3rem;}}
 }

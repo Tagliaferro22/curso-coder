@@ -7,33 +7,39 @@
     <meta name="keywords" content="principal, inicio, comienzo, home, hogar, entrada">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página principal</title>
+    <link rel="icon" href="assets/favicon/favicon.jpg" type="image/x-icon">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="cuerpoCompleto">
     <header class="cabecera">
         <h1 class="title">Pagina principal</h1>
     </header>
+    <div class="padreLogo">
+        <a href="index.html">
+            <img src="assets/img/logo.jpg" alt="" class="logoSitio">
+        </a>
+    </div>
     <nav class="barraDeNavegacion">
         <ul class="menuList">
-            <li class="blog"><a href="mi-blog/index-blog/index-blog.html">Blog</a></li>
-            <li class="portafolio"><a href="index/portafolio.html">Portafolio</a></li>
-            <li class="contacto"><a href="index/contacto.html">Contacto</a></li>
+            <li class="blog"><a href="pages/mi-blog/index-blog/index-blog.html">Blog</a></li>
+            <li class="portafolio"><a href="pages/index/portafolio.html">Portafolio</a></li>
+            <li class="contacto"><a href="pages/index/contacto.html">Contacto</a></li>
         </ul>
     </nav>
     <main class="cuerpoVisibleIndex">
         <div class="imagenesIndex">
-            <div class="card imgIndex" style="width: 50%;">
-                <img src="../../../assets/img/casa.webp" class="card-img-top" alt="Imagen de una casa">
-                <div class="card-body">
-                  <h2 class="card-title">Acerca de mi sitio</h2>
-                  <p class="card-text">Esta es la pagina principal de mi sitio web, donde resumo de manera general el contenido que podemos encontrar</p>
+            <div class="card imgIndex">
+                <img src="assets/img/casa.webp" class="card-img-top" alt="Imagen de una casa">
+                <div class="card-body cuerpoCarta">
+                  <h2 class="card-title subTitleCarta">Acerca de mi sitio</h2>
+                  <p class="card-text textoCarta">Esta es la pagina principal de mi sitio web, donde resumo de manera general el contenido que podemos encontrar</p>
                 </div>
               </div>
         </div>
         <div class="padreIndex">
-            <p>Experimentando con los div... Muajajajaj</p>
+            <h2 class="textoPadreIndex">Experimentando con los div... Muajajajaj</h2>
             <div class="hijo">Hijo 1</div>
             <div class="hijo">Hijo 2</div>
             <div class="hijo">Hijo 3</div>
@@ -66,7 +72,7 @@
             <div class="hijo">Hijo 30</div>
         </div>
         <div class="padreTexto">
-            <h2>Bienvenida</h2>
+            <h2 class="subTitle">Bienvenida</h2>
             <p class="texto">Te doy la bienvenida a mi sitio web, lugar en donde nos podremos nutrir de sabiduria compartiendo buenos momentos juntos.</p>
         </div>
     </main>

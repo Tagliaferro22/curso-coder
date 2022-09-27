@@ -26,4 +26,23 @@ Comparti los links de mi proyecto de 00webhost y de github
 //
 Ordene mi código de SASS de una forma entendible con comentarios*
 //
-Entrega del proyecto final: saco los textos lorem *
+Entrega del proyecto final: saco los textos lorem
+//
+Correcciones de fede:
+/
+revisa los textos por encima de las img ya que no hacen el contraste suficiente y no se puede leer correctamente
+ademas todos los parrafos generales jugalos con mayor tamaño y mayor margenes laterales para que se puedan leer mas comodo
+en las versiones mobile el proyecto no se termina de adaptar correctamente 
+falta sumar un logo, lo podes hacer gratis y facil desde canva
+la carpeta node, no se sube al repo de github
+el index, tiene que estar "suelto" en la carpeta principal del proyecto
+ojo con el contraste de colores ya que en algunas secciones no se cumple esto
+//
+Comentario mio:
+·El index lo coloque en la carpeta principal
+·Agregue un logo y un favicon
+·En la vista para tablet cambie el tamaño maximo para las pantallas para que sea responsive
+·Cambie los colores de fondo para lograr un mayor contraste
+·Aumente el tamaño de los parrafos
+·Saque la carpeta node de github
+

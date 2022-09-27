@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.cabecera, .barraDeNavegacion, .cuerpoVisibleIndex, .padreImagenesBlog, .barraDeNavegacionBlog, .cuerpoVisible, .cuerpoVisiblePortafolio, .cuerpoVisiblePortafolio .imagenesPortafolio, .cuerpoVisiblePortafolio .padre, .cuerpoVisibleContacto, .cuerpoVisibleContacto .formulario, .cuerpoVisibleContacto .imagenesForm, .pieDePagina {
+.cabecera, .barraDeNavegacion, .cuerpoVisibleIndex, .padreImagenesBlog, .barraDeNavegacionBlog, .cuerpoVisible, .cuerpoVisiblePortafolio, .cuerpoVisiblePortafolio .imagenesPortafolio, .cuerpoVisiblePortafolio .padrePortafolio, .cuerpoVisibleContacto, .cuerpoVisibleContacto .formulario, .cuerpoVisibleContacto .imagenesForm, .pieDePagina {
   border: 3px solid #000; }
 
 .cuerpoVisible .seccion .entradaBlog .subTitle {
@@ -66,7 +66,7 @@ Nav */
       display: flex;
       justify-content: center; }
       .barraDeNavegacion .menuListContacto li a {
-        color: #d00000;
+        color: #000;
         font-size: 2.4rem;
         text-decoration: none;
         margin: 1rem; }
@@ -89,7 +89,7 @@ Nav */
       display: flex;
       justify-content: center; }
       .barraDeNavegacion .menuList li a {
-        color: #d00000;
+        color: #000;
         font-size: 2.4rem;
         text-decoration: none;
         width: auto;
@@ -134,6 +134,10 @@ Nav */
       height: auto;
       padding: auto;
       margin: auto; }
+      .cuerpoVisibleIndex .imagenesIndex .imgIndex .cuerpoCarta .subTitleCarta {
+        font-size: 2.1rem; }
+      .cuerpoVisibleIndex .imagenesIndex .imgIndex .cuerpoCarta .textoCarta {
+        font-size: 1.5rem; }
   .cuerpoVisibleIndex .padreIndex {
     grid-area: padre;
     width: auto;
@@ -143,8 +147,11 @@ Nav */
     display: flex;
     flex-wrap: wrap;
     background-color: #d00000; }
+    .cuerpoVisibleIndex .padreIndex .textoPadreIndex {
+      font-size: 2.1rem; }
     .cuerpoVisibleIndex .padreIndex .hijo {
-      background-color: aqua;
+      background-color: black;
+      color: #fff;
       width: 45px;
       height: 45px;
       padding: auto;
@@ -156,6 +163,24 @@ Nav */
     padding: 1.125rem;
     margin: 1.125rem;
     background-color: #d00000; }
+    .cuerpoVisibleIndex .padreTexto .subTitle {
+      text-align: center;
+      font-size: 2.1rem; }
+    .cuerpoVisibleIndex .padreTexto .texto {
+      font-size: 1.5rem; }
+
+/*Logo*/
+.padreLogo {
+  width: auto;
+  height: auto;
+  padding: 1.125rem;
+  margin: 1.125rem;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: auto;
+  right: 0;
+  bottom: 0; }
 
 /* imagen blog */
 .padreImagenesBlog {
@@ -176,6 +201,11 @@ Nav */
     height: auto;
     padding: auto;
     margin: auto; }
+    .padreImagenesBlog .imgBlog .cuerpoCarta .subTitleCarta {
+      text-align: center;
+      font-size: 2.1rem; }
+    .padreImagenesBlog .imgBlog .cuerpoCarta .textoCarta {
+      font-size: 1.5rem; }
 
 @keyframes subiendoYBajando {
   0% {
@@ -219,7 +249,7 @@ Nav */
       padding: auto;
       margin: auto; }
       .barraDeNavegacionBlog .menuListBlog li a {
-        color: #d00000;
+        color: #000;
         font-size: 1.8rem;
         text-decoration: none;
         width: auto;
@@ -260,19 +290,20 @@ Nav */
       color: #20b439;
       width: auto;
       height: auto;
-      padding: 1.125rem;
-      margin: 1.125rem;
+      padding: 0.3rem;
+      margin: 0.5rem;
       background-color: #FFAA00; }
       .cuerpoVisible .seccionNotando .entradaBlog .subTitle {
         text-align: center;
-        font-size: 27px;
+        font-size: 2.1rem;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-weight: inherit; }
       .cuerpoVisible .seccionNotando .entradaBlog .texto {
         width: auto;
         height: auto;
-        padding: 1.125rem;
-        margin: 1.125rem;
+        padding: 0.5rem;
+        margin: 0.5rem;
+        font-size: 1.5rem;
         color: #002df7;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
     .cuerpoVisible .seccionNotando .notandoUno {
@@ -319,18 +350,26 @@ Nav */
     animation-timing-function: linear;
     animation-iteration-count: infinite; }
     .cuerpoVisiblePortafolio .imagenesPortafolio .imgIndexPrincipal {
-      width: 100%;
+      width: auto;
       height: auto;
       padding: 1.125rem;
       margin: 1.125rem; }
-  .cuerpoVisiblePortafolio .padre {
+      .cuerpoVisiblePortafolio .imagenesPortafolio .imgIndexPrincipal .cuerpoCarta .subTitleCarta {
+        font-size: 2.1rem; }
+      .cuerpoVisiblePortafolio .imagenesPortafolio .imgIndexPrincipal .cuerpoCarta .textoCarta {
+        font-size: 1.5rem; }
+  .cuerpoVisiblePortafolio .padrePortafolio {
     display: grid;
     grid-area: padre;
     width: auto;
     height: auto;
     padding: 1.125rem;
-    margin: 1.125rem;
-    background-color: #d00000; }
+    margin: 1.125rem; }
+    .cuerpoVisiblePortafolio .padrePortafolio .subtitle {
+      text-align: center;
+      font-size: 2.1rem; }
+    .cuerpoVisiblePortafolio .padrePortafolio .texto {
+      font-size: 2.1rem; }
 
 /* Main contacto.html */
 .cuerpoVisibleContacto {
@@ -349,8 +388,7 @@ Nav */
     width: auto;
     height: auto;
     padding: 1.125rem;
-    margin: 1.125rem;
-    background-color: #d00000; }
+    margin: 1.125rem; }
     .cuerpoVisibleContacto .formulario .entrada {
       width: auto;
       height: auto;
@@ -358,7 +396,7 @@ Nav */
       margin: 1.125rem;
       text-align: center; }
       .cuerpoVisibleContacto .formulario .entrada .datos {
-        background-color: #a50505;
+        background-color: orange;
         border: 1px solid red; }
   .cuerpoVisibleContacto .imagenesForm {
     grid-area: imagen;
@@ -372,10 +410,15 @@ Nav */
       height: auto;
       padding: auto;
       margin: auto; }
+      .cuerpoVisibleContacto .imagenesForm .imgIndexForm .cuerpoCarta .subTitleCarta {
+        font-size: 2.1rem; }
+      .cuerpoVisibleContacto .imagenesForm .imgIndexForm .cuerpoCarta .textoCarta {
+        font-size: 1.5rem; }
 
 /* pie de página */
 .pieDePagina {
   display: flex;
+  text-align: center;
   justify-content: center;
   align-content: flex-end;
   width: auto;
@@ -385,6 +428,8 @@ Nav */
   background-color: #9d0208; }
   .pieDePagina .textoPie {
     font-size: 2rem;
+    color: black;
+    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif; }
 
 /* Vista Mobile */
@@ -443,9 +488,9 @@ Nav*/
     flex-direction: column;
     justify-content: center; }
     .cuerpoVisible .seccion .entradaBlog .subTitle, .cuerpoVisible .seccionNotando .entradaBlog .subTitle {
-      font-size: 2rem; }
+      font-size: 2.1rem; }
     .cuerpoVisible .seccion .entradaBlog .texto, .cuerpoVisible .seccionNotando .entradaBlog .texto {
-      font-size: 1.2rem; }
+      font-size: 1.5rem; }
     .cuerpoVisible .seccion .entradaBlog .tiempo, .cuerpoVisible .seccionNotando .entradaBlog .tiempo {
       font-size: 1rem; }
     .cuerpoVisible .seccion .entradaBlogFix, .cuerpoVisible .seccionNotando .entradaBlogFix {
@@ -454,42 +499,100 @@ Nav*/
       padding: auto;
       margin: 1rem; } }
 
-@media (max-width: 768px) and (min-width: 481px) {
-  /* Nav Index, blog y contacto */
-  .barraDeNavegacion .menuList li a, .barraDeNavegacion .menuListContacto li a, .barraDeNavegacion .menuListBlog li a, .barraDeNavegacionBlog .menuList li a, .barraDeNavegacionBlog .menuListContacto li a, .barraDeNavegacionBlog .menuListBlog li a {
+@media (max-width: 856px) and (min-width: 481px) {
+  /* Cabecera general */
+  .cabecera .title {
+    font-size: 3.6rem; }
+  /* Nav blog*/
+  .barraDeNavegacionBlog .menuListBlog li a {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.4rem;
     width: auto;
     height: auto;
     padding: auto;
     margin: 0.4rem; }
+  /* Nav blog (p/ el error) */
+  .barraDeNavegacionBlogFix .menuListBlog li a {
+    font-size: 1.6rem; }
+  /* Nav Index y contacto */
+  .barraDeNavegacion .menuList, .barraDeNavegacion .menuListContacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .barraDeNavegacion .menuList li, .barraDeNavegacion .menuListContacto li {
+      display: flex;
+      flex-wrap: wrap; }
+      .barraDeNavegacion .menuList li a, .barraDeNavegacion .menuListContacto li a {
+        font-size: 2.4rem; }
   /* Main Index */
-  .cuerpoVisiblePrincipalIndex {
+  .cuerpoVisibleIndex {
     display: grid;
     grid-template-areas: "imagen" "padre" "padreTexto"; }
+    .cuerpoVisibleIndex .imagenesIndex .imgIndex .cuerpoCarta .subTitleCarta {
+      font-size: 3rem; }
+    .cuerpoVisibleIndex .imagenesIndex .imgIndex .cuerpoCarta .textoCarta {
+      font-size: 2.4rem; }
+    .cuerpoVisibleIndex .padreIndex .textoPadreIndex {
+      font-size: 3rem; }
+    .cuerpoVisibleIndex .padreIndex .hijo {
+      width: 105px;
+      height: 105px;
+      font-size: 2.4rem; }
+    .cuerpoVisibleIndex .padreTexto .subTitle {
+      font-size: 3rem; }
+    .cuerpoVisibleIndex .padreTexto .texto {
+      font-size: 2.4rem; }
   /* Main Portafolio */
-  .cuerpoVisiblePrincipal {
+  .cuerpoVisiblePortafolio {
     display: grid;
     grid-template-areas: "imagen" "padre"; }
+    .cuerpoVisiblePortafolio .imagenesPortafolio .imgIndexPrincipal .cuerpoCarta .subTitleCarta {
+      font-size: 3rem; }
+    .cuerpoVisiblePortafolio .imagenesPortafolio .imgIndexPrincipal .cuerpoCarta .textoCarta {
+      font-size: 2.4rem; }
+    .cuerpoVisiblePortafolio .padrePortafolio .subTitle {
+      font-size: 3rem; }
+    .cuerpoVisiblePortafolio .padrePortafolio .texto {
+      font-size: 2.4rem; }
+  /* Imagen blog */
+  .padreImagenesBlog .imgBlog {
+    width: 100%;
+    height: auto;
+    padding: auto;
+    margin: auto; }
+    .padreImagenesBlog .imgBlog .cuerpoCarta .subTitleCarta {
+      font-size: 3rem; }
+    .padreImagenesBlog .imgBlog .cuerpoCarta .textoCarta {
+      font-size: 2.4rem; }
   /* Main Blog */
   .cuerpoVisible .seccion, .cuerpoVisible .seccionNotando {
     display: flex;
     flex-direction: column;
     justify-content: center; }
     .cuerpoVisible .seccion .entradaBlog .subTitle, .cuerpoVisible .seccionNotando .entradaBlog .subTitle {
-      font-size: 2rem; }
+      font-size: 3rem; }
     .cuerpoVisible .seccion .entradaBlog .texto, .cuerpoVisible .seccionNotando .entradaBlog .texto {
-      font-size: 1.2rem; }
+      font-size: 2.4rem; }
     .cuerpoVisible .seccion .entradaBlog .tiempo, .cuerpoVisible .seccionNotando .entradaBlog .tiempo {
-      font-size: 1rem; }
+      font-size: 1.5rem; }
     .cuerpoVisible .seccion .entradaBlogFix, .cuerpoVisible .seccionNotando .entradaBlogFix {
       width: auto;
       height: auto;
       padding: auto;
-      margin: 1rem; }
+      margin: 2rem; }
   /* Main contacto */
   .cuerpoVisibleContacto {
     grid-template-areas: "formulario" "imagen"; }
+    .cuerpoVisibleContacto .formulario .entrada .label {
+      font-size: 2.4rem; }
+    .cuerpoVisibleContacto .formulario .entrada .datosUno {
+      height: 2.4rem; }
+    .cuerpoVisibleContacto .formulario .entrada .datosDos {
+      width: 70%; }
+    .cuerpoVisibleContacto .imagenesForm .imgIndexForm .cuerpoCarta .subTitleCarta, .cuerpoVisibleContacto .imagenesForm .imgIndexPrincipal .cuerpoCarta .subTitleCarta, .cuerpoVisibleContacto .imagenesPortafolio .imgIndexForm .cuerpoCarta .subTitleCarta, .cuerpoVisibleContacto .imagenesPortafolio .imgIndexPrincipal .cuerpoCarta .subTitleCarta {
+      font-size: 3rem; }
+    .cuerpoVisibleContacto .imagenesForm .imgIndexForm .cuerpoCarta .textoCarta, .cuerpoVisibleContacto .imagenesForm .imgIndexPrincipal .cuerpoCarta .textoCarta, .cuerpoVisibleContacto .imagenesPortafolio .imgIndexForm .cuerpoCarta .textoCarta, .cuerpoVisibleContacto .imagenesPortafolio .imgIndexPrincipal .cuerpoCarta .textoCarta {
+      font-size: 2.4rem; }
   /* Pie */
   .pieDePagina, .pieDePaginaFix {
     display: flex;
@@ -497,4 +600,4 @@ Nav*/
     align-content: flex-end; }
     .pieDePagina .textoPie, .pieDePagina .textoPieFix, .pieDePaginaFix .textoPie, .pieDePaginaFix .textoPieFix {
       text-align: center;
-      font-size: 1.5rem; } }
+      font-size: 3rem; } }
